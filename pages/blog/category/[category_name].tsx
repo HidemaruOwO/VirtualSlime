@@ -5,6 +5,7 @@ import Post from "../../../components/Post";
 import CategoryList from "../../../components/CategoryList";
 import matter from "gray-matter";
 import { getPosts } from "../../../lib/posts";
+import type { BasePost } from "../../../interface";
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
@@ -16,7 +17,7 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
           </h1>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {posts.map((post: any, index: number) => (
+            {posts.map((post: BasePost, index: number) => (
               <Post key={index} post={post} />
             ))}
           </div>
@@ -60,8 +61,8 @@ export async function getStaticProps({ params: { category_name } }) {
   const posts = getPosts();
 
   // Get categories for sidebar
-  const categories = posts.map((post) => post.frontmatter.category);
-  const uniqueCategories = [...new Set(categories)];
+  const categories: BasePost[] = posts.map((post) => post.frontmatter.category);
+  const uniqueCategories = [...new Set<BasePost>(categories)];
 
   // Filter posts by category
   const categoryPosts = posts.filter(
