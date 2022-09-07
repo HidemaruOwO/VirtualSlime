@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
+@import url("https://indestructibletype-fonthosting.github.io/renner.css");
+
+@font-face {
+  font-family: "coastline";
+  src: url("/fonts/coastline.otf");
+}
+
+html,
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  min-width: 100% !important;
+}
+
 p {
   margin: 15px 0;
   line-height: 1.8;
@@ -47,4 +61,31 @@ ol {
 }
 .bg-red-600 {
   background-color: #a70b34;
+}
+
+.menu {
+  font-family: "renner";
+}
+
+.header-title {
+  font-size: 30px;
+  font-family: "coastline";
+}
+
+.header-background {
+  background-image: url("/images/backgrounds/pcondesk.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 50%;
+  min-height: 30vh;
+  max-height: 30vh;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-categoly-list {
+  margin-left: 15px;
 }
