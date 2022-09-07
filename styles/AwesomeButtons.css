@@ -113,3 +113,70 @@ a.shadow-button-border-shadow--color2:before {
   -webkit-box-shadow: 3px 3px 0 #ffff00;
   box-shadow: 3px 3px 0 #ffff00;
 }
+
+@media (max-width: 480px) {
+  .shadow-button,
+  a.shadow-button,
+  button.shadow-button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+
+  a.shadow-button-border-shadow {
+    padding: calc(1rem - 8px) 2rem 1rem;
+
+    background: #fff;
+  }
+
+  a.shadow-button-border-shadow:before {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    border: 3px solid #000;
+    border-radius: 0.5rem;
+  }
+
+  a.shadow-button-border-shadow:hover {
+    padding: calc(1rem - 4px) 2rem;
+  }
+
+  a.shadow-button-border-shadow:hover:before {
+    top: 0;
+    left: 0;
+  }
+
+  a.shadow-button-border-shadow--color2 {
+    border-radius: 100vh;
+  }
+
+  a.shadow-button-border-shadow--color2:before {
+    border-radius: 100vh;
+    -webkit-box-shadow: 2px 2px 0 #ffff00;
+    box-shadow: 2px 2px 0 #ffff00;
+  }
+}

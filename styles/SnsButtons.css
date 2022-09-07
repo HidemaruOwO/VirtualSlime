@@ -100,11 +100,3 @@
   transition-delay: 0s;
   background: #c13584;
 }
-
-/*---FOR MOBILE VIEW---*/
-@media screen and (max-width: 400px) {
-  h1 {
-    padding: 15px;
-    font-size: 25px;
-  }
-}
