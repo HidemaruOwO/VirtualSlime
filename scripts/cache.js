@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+const fs = require("fs");
+const path = require("path");
+const matter = require("gray-matter");
 
 function postData() {
   const files = fs.readdirSync(path.join("posts"));
@@ -30,7 +30,7 @@ try {
   fs.mkdirSync("cache");
 }
 
-fs.writeFile("cache/data.js", postData(), function (err) {
+fs.writeFile("cache/data.ts", postData(), function (err) {
   if (err) return console.log(err);
   console.log("Posts Cached...");
 });
