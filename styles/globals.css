@@ -17,7 +17,7 @@
 
 html,
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif !important;
   min-width: 100vw !important;
   max-width: 100vw !important;
 }
