@@ -5,6 +5,11 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
 @import url("https://indestructibletype-fonthosting.github.io/renner.css");
 
+@import "./SnsButtons.css";
+@import "./Search.css";
+@import "../node_modules/highlightjs/styles/atom-one-dark.css";
+@import "./AwesomeButtons.css";
+
 @font-face {
   font-family: "coastline";
   src: url("/fonts/coastline.otf");
@@ -13,7 +18,8 @@
 html,
 body {
   font-family: "Noto Sans JP", sans-serif;
-  min-width: 100% !important;
+  min-width: 100vw !important;
+  max-width: 100vw !important;
 }
 
 p {
@@ -88,4 +94,9 @@ ol {
 
 .blog-categoly-list {
   margin-left: 15px;
+}
+
+.article-main {
+  margin: 0 auto;
+  max-width: 768px;
 }

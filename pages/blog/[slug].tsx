@@ -2,24 +2,45 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
+import hljs from "highlightjs";
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../../components/Layout";
 import CategoryLabel from "../../components/CategoryLabel";
+import SnsButtons from "../../components/SnsButtons";
+import { convDate } from "../../utils/index";
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
   content,
   slug,
 }) {
+  marked.setOptions({
+    langPrefix: "",
+    highlight: function (code, lang) {
+      return hljs.highlightAuto(code, [lang]).value;
+    },
+  });
   return (
     <Layout title={title}>
-      <Link href="/blog">Go Back</Link>
-      <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
+      <Link href="/blog">
+        <a className="shadow-button shadow-button-border-shadow shadow-button-border-shadow--color2">
+          Go Back
+        </a>
+      </Link>
+      <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6 article-main">
         <div className="flex justify-between items-center mt-4">
           <h1 className="text-5xl mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
-        <img src={cover_image} alt="" className="w-full rounded" />
+        <Image
+          width={"768"}
+          height={"511"}
+          src={cover_image}
+          alt=""
+          className="w-full rounded mx-auto"
+        />
+        <SnsButtons />
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
@@ -30,7 +51,7 @@ export default function PostPage({
             />
             <h4>{author}</h4>
           </div>
-          <div className="mr-4">{date}</div>
+          <div className="mr-4">{convDate(date)}</div>
         </div>
 
         <div className="blog-text mt-2">

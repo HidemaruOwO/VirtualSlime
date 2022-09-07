@@ -39,9 +39,6 @@ export default function Post({ post, compact }: Props) {
 
       {!compact && (
         <div className="flex justify-between items-center mt-6">
-          <Link href={`/blog/${post.slug}`}>
-            <a className="text-gray-900 hover:text-blue-600">Read More</a>
-          </Link>
           <div className="flex items-center">
             <img
               src={post.frontmatter.author_image}
@@ -54,6 +51,16 @@ export default function Post({ post, compact }: Props) {
           </div>
         </div>
       )}
+      <Link href={`/blog/${post.slug}`}>
+        <a>
+          <div className="material-button">
+            <p className="material-btnText">Read More</p>
+            <div className="material-btnTwo">
+              <p className="material-btnTwoText">Go!!</p>
+            </div>
+          </div>
+        </a>
+      </Link>
     </div>
   );
 }
