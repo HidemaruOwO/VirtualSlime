@@ -22,9 +22,7 @@ export default function Post({ post, compact }: Props) {
         />
       )}
       <div className="flex justify-between items-center">
-        <span className="font-light text-gray-600">
-          {convDate(post.frontmatter.date)}
-        </span>
+        <span className="text-gray-600">{convDate(post.frontmatter.date)}</span>
         <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
       </div>
 
