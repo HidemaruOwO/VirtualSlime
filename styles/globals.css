@@ -5,10 +5,12 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
 @import url("https://indestructibletype-fonthosting.github.io/renner.css");
 
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/highlightjs/styles/atom-one-dark.css";
 @import "./SnsButtons.css";
 @import "./Search.css";
-@import "../node_modules/highlightjs/styles/atom-one-dark.css";
 @import "./AwesomeButtons.css";
+@import "./TableContents.css";
 
 @font-face {
   font-family: "coastline";

@@ -3,11 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
 import hljs from "highlightjs";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../../components/Layout";
 import CategoryLabel from "../../components/CategoryLabel";
 import SnsButtons from "../../components/SnsButtons";
+import TableContents from "../../components/TableConetnts";
 import { convDate } from "../../utils/index";
 
 export default function PostPage({
@@ -21,6 +23,15 @@ export default function PostPage({
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
+
+  const [tableContents, setTableContents] = useState();
+  const contentRef = useRef();
+
+  useEffect(() => {
+    const headings = contentRef.current.querySelectorAll("h2, h3, h4, h5, h6");
+    console.log(headings);
+    setTableContents(<TableContents headings={headings} />);
+  }, [contentRef]);
 
   return (
     <Layout title={title}>
@@ -56,9 +67,20 @@ export default function PostPage({
           </div>
           <div className="mr-4">{convDate(date)}</div>
         </div>
-
+        {/* table of content */}
+        <div className="tablecontent-box">
+          <details>
+            <summary className="tablecontent-head">
+              <i className="zmdi zmdi-edit" /> 目次
+            </summary>
+            {tableContents}
+          </details>
+        </div>
         <div className="blog-text mt-2">
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          <div
+            ref={contentRef}
+            dangerouslySetInnerHTML={{ __html: marked(content) }}
+          ></div>
         </div>
       </div>
     </Layout>

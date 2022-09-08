@@ -1,0 +1,56 @@
+details[open] .details-content {
+  animation: fadeIn 0.5s ease !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tablecontent-box {
+  margin: 2em auto;
+  padding: 1em;
+  width: 90%;
+  border: 5px dotted #f09199;
+  border-radius: 1px;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  list-style: none;
+  outline: none;
+}
+
+ol {
+  padding-right: 0.5em;
+}
+
+.tablecontent-0 {
+  padding-left: 0px;
+}
+
+.tablecontent-4 {
+  padding-left: 16px;
+}
+
+.tablecontent-8 {
+  padding-left: 32px;
+}
+
+.tablecontent-12 {
+  padding-left: 48px;
+}
+.tablecontent-16 {
+  padding-left: 64px;
+}
+
+.tablecontent-link:hover {
+  color: #444444;
+}
