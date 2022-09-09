@@ -6,6 +6,8 @@ import hljs from "highlightjs";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import CategoryLabel from "../../components/CategoryLabel";
 import SnsButtons from "../../components/SnsButtons";
@@ -13,7 +15,15 @@ import TableContents from "../../components/TableConetnts";
 import { convDate } from "../../utils/index";
 
 export default function PostPage({
-  frontmatter: { title, category, date, cover_image, author, author_image },
+  frontmatter: {
+    title,
+    excerpt,
+    category,
+    date,
+    cover_image,
+    author,
+    author_image,
+  },
   content,
   slug,
 }) {
@@ -26,6 +36,9 @@ export default function PostPage({
 
   const [tableContents, setTableContents] = useState();
   const contentRef = useRef();
+  const router = useRouter();
+  const domain: string = "https://v-sli.me";
+  const url = domain + router.asPath;
 
   useEffect(() => {
     const headings = contentRef.current.querySelectorAll("h2, h3, h4, h5, h6");
@@ -34,7 +47,23 @@ export default function PostPage({
   }, [contentRef]);
 
   return (
-    <Layout title={title}>
+    <Layout title={title} keywords={category} description={excerpt}>
+      <Head>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={domain + cover_image} />
+        <meta property="og:site_name" content="v-sli.me" />
+        <meta property="og:local" content="ja_JP" />
+        {/* Twitter card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Hidemaru_OwO" />
+        <meta name="twitter:creator" content="@Hidemaru_OwO" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:image" content={domain + cover_image} />
+      </Head>
       <Link href="/blog">
         <div className="blog-back">
           <a className="shadow-button shadow-button-border-shadow shadow-button-border-shadow--color2">
