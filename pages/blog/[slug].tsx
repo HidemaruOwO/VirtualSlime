@@ -50,7 +50,7 @@ export default function PostPage({
     <Layout title={title} keywords={category} description={excerpt}>
       <Head>
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={title} />
+        <meta property="og:description" content={excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={domain + cover_image} />
