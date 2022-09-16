@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://v-sli.me/</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/about</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/category/vim</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/vim-plugin-manager</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/category/mac</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/mac-run-genshin-native</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/category/linux</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/chsh-pam-authentication-failure</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/linux-crlf-to-lf</loc>
+  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
