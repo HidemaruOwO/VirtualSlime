@@ -1,5 +1,5 @@
 ---
-title: "LinuxでCRLFとLFを一括で相互変換する"
+title: "【Linux】LinuxでCRLFとLFを一括で相互変換する"
 date: "20220907"
 excerpt: "コーディングしてるとCRLFとLFが混在してストレスが溜まる機会があります。\nその時にコマンド一つでどちらかに変換できると便利なので、その方法を書き残します。"
 cover_image: "/images/posts/img2.jpeg"

@@ -184,3 +184,11 @@ h1 {
 .blog-back {
   margin-left: 5vw;
 }
+
+.blog-text blockquote {
+  border-left: 3px solid #c0c0c0;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  line-height: 1.8;
+  font-size: 14.5px;
+}

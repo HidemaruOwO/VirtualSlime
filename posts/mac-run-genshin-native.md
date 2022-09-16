@@ -1,5 +1,5 @@
 ---
-title: "Macで原神をnativeに遊ぶ"
+title: "【原神】M1,M2 Macで原神をネーティブに遊ぶ"
 date: "20220910"
 excerpt: "GeForce nowを使わないPlayCoverでnativeに原神を遊ぶ方法"
 cover_image: "/images/posts/img3.png"
