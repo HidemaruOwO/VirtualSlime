@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
-import axios from "axios";
 import hljs from "highlightjs";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";

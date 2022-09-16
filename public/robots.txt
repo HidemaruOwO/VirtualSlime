@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://v-sli.me
+
+# Sitemaps
+Sitemap: https://v-sli.me/sitemap.xml
