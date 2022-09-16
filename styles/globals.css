@@ -181,6 +181,14 @@ h1 {
   }
 }
 
+@media (max-width: 480px) {
+  .article-main {
+    margin: 0 auto;
+    width: 100wh;
+    padding: 0 5vw;
+  }
+}
+
 .blog-back {
   margin-left: 5vw;
 }

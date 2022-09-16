@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
+import axios from "axios";
 import hljs from "highlightjs";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -108,7 +109,9 @@ export default function PostPage({
         <div className="blog-text mt-2">
           <div
             ref={contentRef}
-            dangerouslySetInnerHTML={{ __html: marked(content) }}
+            dangerouslySetInnerHTML={{
+              __html: marked(content),
+            }}
           ></div>
         </div>
       </div>
