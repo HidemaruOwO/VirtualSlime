@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
 
 type Props = {
@@ -20,7 +19,7 @@ export default function Document({
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (
-        <Image
+        <img
           src={image}
           alt=""
           height={420}

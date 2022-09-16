@@ -5,7 +5,6 @@ import marked from "marked";
 import hljs from "highlightjs";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
@@ -76,7 +75,7 @@ export default function PostPage({
         <div className="flex justify-between items-center mt-4">
           <h1 className="mx-auto mb-6 text-center">{title}</h1>
         </div>
-        <Image
+        <img
           width={"768"}
           height={"511"}
           src={cover_image}
