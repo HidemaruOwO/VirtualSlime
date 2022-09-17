@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import Layout from "../components/Layout";
 import Post from "../components/Post";
 import Document from "../components/Document";
@@ -7,6 +8,13 @@ import { getPosts } from "../lib/posts";
 export default function HomePage({ posts }) {
   return (
     <Layout>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <h1 className="text-5xl border-b-4 p-5 font-bold">📮 Latest Articles</h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -62,11 +62,6 @@ export default function PostPage({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={excerpt} />
         <meta name="twitter:image" content={domain + cover_image} />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
-          crossOrigin="anonymous"
-        />
       </Head>
       <Link href="/blog">
         <div className="blog-back">
