@@ -179,7 +179,7 @@ let g:jetpack_copy_method='hardlink' " ハードリンクを作成
 let g:jetpack_copy_method="symlink" " シンポリックリンクを作成
 ```
 
-これは`:JetpackSync` した際ファイルをコピーする速度に関する設定です
+これは`:JetpackSync` した際ファイルをコピーする速度に関する設定です  
 Neovim を使ってる場合は`let g:jetpack_copy_method='copy'`に設定しましょう  
 もし環境が壊れた場合は`let g:jetpack_copy_method='default'`に戻しましょう
 
