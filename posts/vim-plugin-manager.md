@@ -19,7 +19,7 @@ Vim にはプラグインマネージャーが無数にあるので、シンプ�
 
 [![tani/vim-jetpack - GitHub](https://gh-card.dev/repos/tani/vim-jetpack.svg?fullname=)](https://github.com/tani/vim-jetpack)
 
-### なんだそれは
+### なんだこれは
 
 `vim-jetpack`開発者の方の Zenn の記事によると、
 
