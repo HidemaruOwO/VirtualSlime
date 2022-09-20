@@ -140,18 +140,63 @@ Vim で`.vimrc`を開いて以下のコマンを実行してください
 
 ### コマンド
 
-`vim-jetpack`で使用するコマンドはただ一つ
+`vim-jetpack`で使用するコマンドはただ二つ
+
+#### JetpackSync
 
 ```vim
 :JetpackSync
 ```
 
-このコマンドは、プラグインのインストール及び更新と最適化まで全て行います
+このコマンド一本で、プラグインのインストール及び更新と最適化まで全て行います
+
+#### Jetpack repo
+
+```vim
+:Jetpack repo ['user/repo',option]
+```
+
+このコマンドは`jetpack#add()`をコマンドにしたもので、GitHub リポジトリと option を指定するとプラグインを追加します  
+dotfiles などで、複数の環境で共有して使っている場合は推奨しません
 
 ### 設定
 
-設定も同じくシンプルです
-最適化の度合いを設定するだけです
+#### g:jetpack_ignore_patterns
+
+```vim
+call add(g:jetpack_ignore_patterns, '/*.yaml')
+call add(g:jetpack_ignore_patterns, '/*.json')
+```
+
+このリストはファイルのバッティングを無視するようにします
+
+#### g:jetpack_copy_method
+
+```vim
+let g:jetpack_copy_method='system' " Default 安定
+let g:jetpack_copy_method='copy' " Neovimのみ使用可能 高速
+let g:jetpack_copy_method='hardlink' " ハードリンクを作成
+let g:jetpack_copy_method="symlink" " シンポリックリンクを作成
+```
+
+これは`:JetpackSync` した際ファイルをコピーする速度に関する設定です
+Neovim を使ってる場合は`let g:jetpack_copy_method='copy'`に設定しましょう  
+もし環境が壊れた場合は`let g:jetpack_copy_method='default'`に戻しましょう
+
+#### g:jetpack_download_method
+
+```vim
+let g:jetpack_download_method='git' " プラグインのダウンロードにgitを使用
+let g:jetpack_download_method='curl' " プラグインのダウンロードにcurlを使用
+let g:jetpack_download_method='wget' " プラグインのダウンロードにwgetを使用
+```
+
+これは`:JetpackSync`した際ファイルをダウンロードする時に使うコマンドを設定できます  
+`git`が入っていない開発環境なんて聞いたことがないので、デフォルト値の`git`で問題ありません
+
+#### g:jetpack#optimization
+
+**※`g:jetpack#optimization`はアップデートによって機能しなくなりました**
 
 ```vim
 let g:jetpack#optimization=0 " 最適化しない
@@ -159,5 +204,5 @@ let g:jetpack#optimization=1 " 安全な場合最適化
 let g:jetpack#optimization=2 " 全てのプラグインを最適化
 ```
 
-とりあえず`let g:jetpack#optimization=2`で設定しましょう  
-もし環境が壊れた場合は`let g:jetpack#optimization=1`に設定しましょう
+~~とりあえず`let g:jetpack#optimization=2`で設定しましょう~~  
+~~もし環境が壊れた場合は`let g:jetpack#optimization=1`に設定しましょう~~
