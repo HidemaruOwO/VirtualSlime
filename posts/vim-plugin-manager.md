@@ -45,9 +45,78 @@ curl -fLo ~/.vim/autoload/jetpack.vim --create-dirs https://raw.githubuserconten
 curl -fLo ~/.config/nvim/autoload/jetpack.vim --create-dirs https://raw.githubusercontent.com/tani/vim-jetpack/master/autoload/jetpack.vim
 ```
 
+### プラグインの追加
+
+Jetpack は複数の DSL に対応しているので、様々な書き方でプラグインをインストールすることができます  
+筆者はシンプルな`vim-plug`方式で使ってます
+
+#### vim-plug style
+
+```vim
+call jetpack#begin()
+  " bootstrap
+  Jetpack 'tani/vim-jetpack', { 'opt': 1 }
+  Jetpack 'junegunn/fzf.vim'
+  Jetpack 'junegunn/fzf', { 'do': {-> fzf#install()} }
+  Jetpack 'neoclide/coc.nvim', { 'branch': 'release' }
+  Jetpack 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+  Jetpack 'vlime/vlime', { 'rtp': 'vim' }
+  Jetpack 'dracula/vim', { 'as': 'dracula' }
+  Jetpack 'tpope/vim-fireplace', { 'for': 'clojure' }
+call jetpack#end()
+```
+
+#### dein/ minpac style
+
+```vim
+call jetpack#begin()
+  " bootstrap
+  call jetpack#add('tani/vim-jetpack', { 'opt': 1 })
+  call jetpack#add('junegunn/fzf.vim')
+  call jetpack#add('junegunn/fzf', { 'do': {-> fzf#install()} })
+  call jetpack#add('neoclide/coc.nvim', { 'branch': 'release' })
+  call jetpack#add('neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' })
+  call jetpack#add('vlime/vlime', { 'rtp': 'vim' })
+  call jetpack#add('dracula/vim', { 'as': 'dracula' })
+  call jetpack#add('tpope/vim-fireplace', { 'for': 'clojure' })
+call jetpack#end()
+```
+
+#### packer style
+
+```lua
+require('jetpack').startup(function(use)
+  -- bootstrap
+  use {'tani/vim-jetpack', opt = 1}
+  use 'junegunn/fzf.vim'
+  use {'junegunn/fzf', do = 'call fzf#install()' }
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use {'neoclide/coc.nvim', branch = 'master', do = 'yarn install --frozen-lockfile'}
+  use {'vlime/vlime', rtp = 'vim' }
+  use {'dracula/vim', as = 'dracula' }
+  use {'tpope/vim-fireplace', for = 'clojure' }
+end)
+```
+
+#### paq style
+
+```lua
+require('jetpack').setup {
+  -- bootstrap
+  {'tani/vim-jetpack', opt = 1},
+  'junegunn/fzf.vim',
+  {'junegunn/fzf', do = 'call fzf#install()' },
+  {'neoclide/coc.nvim', branch = 'release'},
+  {'neoclide/coc.nvim', branch = 'master', do = 'yarn install --frozen-lockfile'},
+  {'vlime/vlime', rtp = 'vim' },
+  {'dracula/vim', as = 'dracula' },
+  {'tpope/vim-fireplace', for = 'clojure' },
+}
+```
+
 ### 移行
 
-Jetpack は複数の DSL に対応しているので、他のプラグインマネージャーからの移行がとても容易です  
+前述した通り Jetpack は複数の DSL に対応しているので、他のプラグインマネージャーからの移行がとても容易です  
 Vim で`.vimrc`を開いて以下のコマンを実行してください  
 **移行元のプラグインマネージャーの設定はコメントアウトして消してください**
 
