@@ -12,7 +12,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ## 実行環境
 
-![neofetch result](https://raw.githubusercontent.com/HidemaruOwO/MyHomePage/main/public/images/posts/inside/img1.jpg)
+![neofetch result](/images/posts/inside/img1.jpg)
 
 ## エラー発生手順
 

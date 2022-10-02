@@ -1,5 +1,5 @@
 ---
-title: "【原神】M1,M2 Macで原神をネーティブに遊ぶ"
+title: "【Mac】M1/M2 Macで原神をネーティブに遊ぶ"
 date: "20220910"
 excerpt: "GeForce nowを使わないPlayCoverでnativeに原神を遊ぶ方法"
 cover_image: "/images/posts/img3.png"
@@ -37,12 +37,12 @@ PlayCover とは M1 シリーズや M2 などの Apple Silicon デバイスで i
 起動したらアプリを追加を押してください  
 そうすると、 Finder が表示されますので、ダウンロードした **.ipa** ファイルを選択してください  
 少し時間が経つと原神が追加されますので、それをタップすれば原神が起動します
-![Play Cover Menu](https://raw.githubusercontent.com/HidemaruOwO/MyHomePage/main/public/images/posts/inside/img2.png)
+![Play Cover Menu](/images/posts/inside/img2.png)
 
 ### 起動
 
 原神が起動できたらログインして遊びましょう!!  
-![原神](https://raw.githubusercontent.com/HidemaruOwO/MyHomePage/main/public/images/posts/inside/img4.png)
+![原神](/images/posts/inside/img4.png)
 
 ## 公式 Discord サーバー
 
