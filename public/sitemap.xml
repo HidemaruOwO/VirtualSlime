@@ -9,52 +9,57 @@
 
 <url>
   <loc>https://v-sli.me/</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/about</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://v-sli.me/blog/category/vim</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://v-sli.me/blog/vim-plugin-manager</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog/category/mac</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/how-to-build-neovim-on-m1-mac</loc>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/category/vim</loc>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://v-sli.me/blog/vim-plugin-manager</loc>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog/mac-run-genshin-native</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog/category/linux</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog/chsh-pam-authentication-failure</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://v-sli.me/blog/linux-crlf-to-lf</loc>
-  <lastmod>2022-09-16T11:49:05+00:00</lastmod>
+  <lastmod>2022-10-02T08:27:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
