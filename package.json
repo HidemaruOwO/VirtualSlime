@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/cache.js && next build && next export",
+    "build": "node scripts/cache.js && next build && next export && next-sitemap",
     "start": "next start",
     "cache-posts": "node scripts/cache.js"
   },
@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.7",
     "eslint-prettier": "^0.0.0-empty",
-    "next-sitemap": "^3.1.22",
+    "next-sitemap": "^3.1.32",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",
