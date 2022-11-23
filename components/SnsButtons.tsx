@@ -1,7 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-export default function SnsButtons() {
+type Props = {
+  title: string;
+};
+
+export default function SnsButtons({ title }: Props) {
   type Site = {
     name: string;
     url: string;
@@ -18,13 +22,13 @@ export default function SnsButtons() {
   return (
     <div className="menu-button">
       <i className="zmdi zmdi-share"></i>
-      <a href={sites[0].url + url}>
+      <a href={sites[0].url + title + "\n" + url}>
         <i className="zmdi zmdi-twitter"></i>
       </a>
-      <a href={sites[1].url + url}>
+      <a href={sites[1].url + title + "\n" + url}>
         <i className="zmdi zmdi-facebook"></i>
       </a>
-      <a href={sites[2].url + url}>
+      <a href={sites[2].url + title + "\n" + url}>
         <i className="zmdi zmdi-instagram"></i>{" "}
       </a>
     </div>

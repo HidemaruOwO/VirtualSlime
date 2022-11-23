@@ -28,7 +28,7 @@ export default function PostPage({
 }) {
   marked.setOptions({
     langPrefix: "",
-    highlight: function (code, lang) {
+    highlight: function(code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
@@ -82,7 +82,7 @@ export default function PostPage({
           alt=""
           className="w-full rounded mx-auto"
         />
-        <SnsButtons />
+        <SnsButtons title={title} />
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
