@@ -29,7 +29,7 @@ export default function PostPage({
 }) {
   marked.setOptions({
     langPrefix: "",
-    highlight: function (code, lang) {
+    highlight: function(code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
@@ -64,13 +64,13 @@ export default function PostPage({
         <meta name="twitter:description" content={excerpt} />
         <meta name="twitter:image" content={domain + cover_image} />
       </Head>
-      <Link href="/blog" legacyBehavior>
-        <div className="blog-back">
+      <div className="blog-back">
+        <Link href="/blog" legacyBehavior>
           <a className="shadow-button shadow-button-border-shadow shadow-button-border-shadow--color2">
             Go Back
           </a>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6 article-main">
         <CategoryLabel>{category}</CategoryLabel>
         <div className="flex justify-between items-center mt-4">
