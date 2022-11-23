@@ -42,7 +42,6 @@ export default function PostPage({
 
   useEffect(() => {
     const headings = contentRef.current.querySelectorAll("h2, h3, h4, h5, h6");
-    console.log(headings);
     setTableContents(<TableContents headings={headings} />);
   }, [contentRef]);
 
