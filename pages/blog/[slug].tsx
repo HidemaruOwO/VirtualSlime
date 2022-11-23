@@ -6,6 +6,7 @@ import hljs from "highlightjs";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import CategoryLabel from "../../components/CategoryLabel";
@@ -28,7 +29,7 @@ export default function PostPage({
 }) {
   marked.setOptions({
     langPrefix: "",
-    highlight: function(code, lang) {
+    highlight: function (code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
@@ -63,7 +64,7 @@ export default function PostPage({
         <meta name="twitter:description" content={excerpt} />
         <meta name="twitter:image" content={domain + cover_image} />
       </Head>
-      <Link href="/blog">
+      <Link href="/blog" legacyBehavior>
         <div className="blog-back">
           <a className="shadow-button shadow-button-border-shadow shadow-button-border-shadow--color2">
             Go Back
@@ -75,7 +76,7 @@ export default function PostPage({
         <div className="flex justify-between items-center mt-4">
           <h1 className="mx-auto mb-6 text-center">{title}</h1>
         </div>
-        <img
+        <Image
           width={"768"}
           height={"511"}
           src={cover_image}
@@ -86,10 +87,12 @@ export default function PostPage({
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
-            <img
+            <Image
               src={author_image}
-              alt=""
-              className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+              alt="Author Image"
+              width={40}
+              height={40}
+              className="mx-4 object-cover rounded-full hidden sm:block"
             />
             <h4>{author}</h4>
           </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import CategoryLabel from "./CategoryLabel";
 import { convDate } from "../utils/index";
 import type { BasePost } from "../interface";
+import Image from "next/image";
 
 type Props = {
   post: BasePost;
@@ -12,7 +13,7 @@ export default function Post({ post, compact }: Props) {
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (
-        <img
+        <Image
           src={post.frontmatter.cover_image}
           alt=""
           height={420}
@@ -26,10 +27,12 @@ export default function Post({ post, compact }: Props) {
       </div>
 
       <div className="mt-2">
-        <Link href={`/blog/${post.slug}`}>
-          <a className="text-2xl text-gray-700 font-bold hover:underline">
-            {post.frontmatter.title}
-          </a>
+        <Link
+          href={`/blog/${post.slug}`}
+          className="text-2xl text-gray-700 font-bold hover:underline">
+
+          {post.frontmatter.title}
+
         </Link>
         <p className="mt-2 text-gray-600">{post.frontmatter.excerpt}</p>
       </div>
@@ -37,10 +40,12 @@ export default function Post({ post, compact }: Props) {
       {!compact && (
         <div className="flex justify-between items-center mt-6">
           <div className="flex items-center">
-            <img
+            <Image
               src={post.frontmatter.author_image}
-              alt=""
-              className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+              alt="Author Image"
+              width={40}
+              height={40}
+              className="mx-4 object-cover rounded-full hidden sm:block"
             />
             <h3 className="text-gray-700 font-bold">
               {post.frontmatter.author}
@@ -49,14 +54,14 @@ export default function Post({ post, compact }: Props) {
         </div>
       )}
       <Link href={`/blog/${post.slug}`}>
-        <a>
-          <div className="material-button">
-            <p className="material-btnText">Read More</p>
-            <div className="material-btnTwo">
-              <p className="material-btnTwoText">Go!!</p>
-            </div>
+
+        <div className="material-button">
+          <p className="material-btnText">Read More</p>
+          <div className="material-btnTwo">
+            <p className="material-btnTwoText">Go!!</p>
           </div>
-        </a>
+        </div>
+
       </Link>
     </div>
   );

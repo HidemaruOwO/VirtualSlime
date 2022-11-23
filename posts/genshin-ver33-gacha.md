@@ -2,7 +2,7 @@
 title: "【v3.3】原神のPUガチャ・復刻予想。雷電将軍と神里綾華と神里綾人の可能性"
 date: "20221122"
 excerpt: "原神のPUの予想をしました。雷電将軍とエウルアと神里綾華や神里綾人が高確率で来そうです"
-cover_image: "/images/posts/img6.png"
+cover_image: "/images/posts/img6.jpeg"
 category: "Genshin Impact"
 author: "Hidemaru"
 author_image: "/images/authors/hidemaru.png"

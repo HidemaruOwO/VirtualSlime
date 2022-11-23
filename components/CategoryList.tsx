@@ -8,11 +8,14 @@ export default function CategoryList({ categories }) {
       </h3>
       <ul className='divide-y divide-gray-300'>
         {categories.map((category, index) => (
-          <Link key={index} href={`/blog/category/${category.toLowerCase()}`}>
+          <Link
+            key={index}
+            href={`/blog/category/${category.toLowerCase()}`}
+            legacyBehavior>
             <li className='p-4 cursor-pointer hover:bg-gray-50'>{category}</li>
           </Link>
         ))}
       </ul>
     </div>
-  )
+  );
 }

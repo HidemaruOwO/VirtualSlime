@@ -1,5 +1,4 @@
-import Link from "next/link";
-import CategoryLabel from "./CategoryLabel";
+import Image from "next/image";
 
 type Props = {
   title: string;
@@ -19,9 +18,9 @@ export default function Document({
   return (
     <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
       {!compact && (
-        <img
+        <Image
           src={image}
-          alt=""
+          alt="App Icon"
           height={420}
           width={600}
           className="mb-4 rounded"

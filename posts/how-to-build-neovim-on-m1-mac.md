@@ -2,7 +2,7 @@
 title: "【Mac】M1/M2 MacでNeoVimをソースコードからビルドする"
 date: "20221002"
 excerpt: "昨今SSDの容量が圧迫し始めたので、Macを初期化したのでNeoVimのビルドの忘備録を書き残したいと思います"
-cover_image: "/images/posts/img5.png"
+cover_image: "/images/posts/img5.jpeg"
 category: "Mac"
 author: "Hidemaru"
 author_image: "/images/authors/hidemaru.png"
@@ -12,7 +12,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ## 実行環境
 
-![neofetch result](/images/posts/inside/img5.png)
+![neofetch result](/images/posts/inside/img5.jpeg)
 
 ## NeoVim
 
@@ -89,5 +89,5 @@ sudo make install
 ```
 
 インストールが終わったら`nvim`を実行してください
-![Neovim Run](/images/posts/inside/img6.png)
+![Neovim Run](/images/posts/inside/img6.jpeg)
 良い Vim ライフを！！

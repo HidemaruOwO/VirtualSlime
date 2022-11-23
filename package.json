@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/cache.js && next build && next export && next-sitemap",
+    "build": "node scripts/cache.js && next build && next export && next-export-optimize-images && next-sitemap",
     "start": "next start",
     "cache-posts": "node scripts/cache.js"
   },
@@ -13,13 +13,14 @@
     "gray-matter": "^4.0.3",
     "highlightjs": "^9.16.2",
     "marked": "^2.0.4",
-    "next": "10.2.0",
+    "next": "^13.0.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
-    "react-dom": "17.0.2",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "@types/node": "18.11.9",
     "@types/react": "18.0.1",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "autoprefixer": "^10.2.5",
@@ -31,6 +32,9 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.7",
     "eslint-prettier": "^0.0.0-empty",
+    "imagemin-svgo": "^10.0.1",
+    "next-export-optimize-images": "^1.9.0",
+    "next-optimized-images": "^2.6.2",
     "next-sitemap": "^3.1.32",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",

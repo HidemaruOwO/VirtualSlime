@@ -1,14 +1,12 @@
 import Layout from "../components/Layout";
+import Image from "next/image";
 
 export default function NotFoundPage() {
   return (
     <Layout title="Page Not Found">
       <div className="flex flex-col items-center mt-20">
-        <img
-          src="/images/logo.png"
-          width={70}
-          height={70}
-          className="bg-gray-800 rounded-2xl"
+        <div
+          className="w-20 h-20 bg-gray-800 rounded-2xl"
         />
 
         <h1 className="text-6xl my-5">Whoops!</h1>

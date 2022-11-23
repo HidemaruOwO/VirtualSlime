@@ -2,7 +2,7 @@
 title: "【Vim】シンプルで高速なプラグインマネージャー vim-jetpack"
 date: "20220916"
 excerpt: "Vimにはプラグインマネージャーが無数にあるので、シンプルで高速なおすすめのプラグインマネージャーを一つ書き残そうと思います"
-cover_image: "/images/posts/img4.jpg"
+cover_image: "/images/posts/img4.jpeg"
 category: "Vim"
 author: "Hidemaru"
 author_image: "/images/authors/hidemaru.png"
