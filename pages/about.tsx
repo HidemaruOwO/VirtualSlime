@@ -5,7 +5,6 @@ export default function AboutPage() {
   return (
     <Layout
       title="About Virtual Slime"
-      description="v-sli.meのプライバシーポリシーです"
     >
       <h1 className="text-5xl border-b-4 pb-5 font-bold">About</h1>
 

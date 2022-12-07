@@ -2,7 +2,10 @@ import Layout from "../components/Layout";
 
 export default function PrivacyPolicyPage() {
   return (
-    <Layout title="About DevSpace">
+    <Layout
+      title="Privacy Policy"
+      description="v-sli.meのプライバシーポリシーです"
+    >
       <h1 className="text-5xl border-b-4 pb-5 font-bold">
         プライバシーポリシー
       </h1>
