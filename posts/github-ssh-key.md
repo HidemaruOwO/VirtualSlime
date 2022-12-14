@@ -107,7 +107,7 @@ git@github.com: Permission denied (publickey).
 叱られないようにするには、秘密鍵を`.rw-------`権限に設定しましょう。
 
 ```bash
-$ chmod 600 ~/seacret/github.pem
+$ chmod 600 seacret/github.pem
 ```
 
 ### SSH の設定ファイルに書き込む
