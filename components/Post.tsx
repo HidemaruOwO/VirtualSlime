@@ -3,6 +3,7 @@ import CategoryLabel from "./CategoryLabel";
 import { convDate } from "../utils/index";
 import type { BasePost } from "../interface";
 import Image from "next/image";
+import React from "react";
 
 type Props = {
   post: BasePost;
@@ -29,15 +30,14 @@ export default function Post({ post, compact }: Props) {
       <div className="mt-2">
         <Link
           href={`/blog/${post.slug}`}
-          className="text-2xl text-gray-700 font-bold hover:underline">
-
+          className="text-2xl text-gray-700 font-bold hover:underline hover:text-gray-700"
+        >
           {post.frontmatter.title}
-
         </Link>
         <p className="mt-2 text-gray-600">{post.frontmatter.excerpt}</p>
       </div>
 
-      {!compact && (
+      {compact && (
         <div className="flex justify-between items-center mt-6">
           <div className="flex items-center">
             <Image
@@ -54,14 +54,12 @@ export default function Post({ post, compact }: Props) {
         </div>
       )}
       <Link href={`/blog/${post.slug}`}>
-
         <div className="material-button">
           <p className="material-btnText">Read More</p>
           <div className="material-btnTwo">
             <p className="material-btnTwoText">Go!!</p>
           </div>
         </div>
-
       </Link>
     </div>
   );

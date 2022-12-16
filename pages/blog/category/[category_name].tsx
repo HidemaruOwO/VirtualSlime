@@ -2,16 +2,16 @@ import fs from "fs";
 import path from "path";
 import Layout from "../../../components/Layout";
 import Post from "../../../components/Post";
-import CategoryList from "../../../components/CategoryList";
 import matter from "gray-matter";
 import { getPosts } from "../../../lib/posts";
 import type { BasePost } from "../../../interface";
+import React from "react";
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
       <div className="flex justify-between">
-        <div className="w-3/4 mr-10">
+        <div>
           <h1 className="text-5xl border-b-4 p-5 font-bold">
             Posts in {categoryName}
           </h1>
@@ -21,10 +21,6 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
               <Post key={index} post={post} />
             ))}
           </div>
-        </div>
-
-        <div className="w-1/4">
-          <CategoryList categories={categories} />
         </div>
       </div>
     </Layout>

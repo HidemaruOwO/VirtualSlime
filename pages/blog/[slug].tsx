@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
 import hljs from "highlightjs";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -13,6 +13,8 @@ import CategoryLabel from "../../components/CategoryLabel";
 import SnsButtons from "../../components/SnsButtons";
 import TableContents from "../../components/TableConetnts";
 import { convDate } from "../../utils/index";
+import Post from "../../components/Post";
+import posts from "../../cache/data";
 
 export default function PostPage({
   frontmatter: {
@@ -128,6 +130,9 @@ export default function PostPage({
           ></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+      </div>
+      <div className="mx-10 mt-4 other-articles">
+        <h3 className="text-3xl font-bold">Other articles</h3>
       </div>
     </Layout>
   );

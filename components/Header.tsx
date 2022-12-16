@@ -15,14 +15,14 @@ export default function Header() {
         </Link>
         <nav className="flex flex-wrap md:w-4/5 items-center justify-end text-base md:ml-auto">
           <Link href="/blog" className="menu mx-5 cursor-pointer hover:text-indigo-300">
-            
-              Blog
-            
+
+            Blog
+
           </Link>
           <Link href="/about" className="menu mx-5 cursor-pointer hover:text-indigo-300">
-            
-              About
-            
+
+            About
+
           </Link>
         </nav>
       </div>

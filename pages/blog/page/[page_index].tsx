@@ -3,9 +3,9 @@ import path from "path";
 import Layout from "../../../components/Layout";
 import Post from "../../../components/Post";
 import Pagination from "../../../components/Pagination";
-import CategoryList from "../../../components/CategoryList";
 import { POSTS_PER_PAGE } from "../../../config/index";
 import { getPosts } from "../../../lib/posts";
+import React from "react";
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
@@ -21,10 +21,6 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
           </div>
 
           <Pagination currentPage={currentPage} numPages={numPages} />
-        </div>
-
-        <div className="w-1/4 blog-categoly-list">
-          <CategoryList categories={categories} />
         </div>
       </div>
     </Layout>
