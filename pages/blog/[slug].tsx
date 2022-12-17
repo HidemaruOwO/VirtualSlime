@@ -50,6 +50,12 @@ export default function PostPage({
   return (
     <Layout title={title} keywords={category} description={excerpt}>
       <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
+          crossOrigin="anonymous"
+        />
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={excerpt} />
         <meta property="og:type" content="article" />
