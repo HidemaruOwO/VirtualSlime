@@ -32,7 +32,7 @@ export default function PostPage({
 }) {
   marked.setOptions({
     langPrefix: "",
-    highlight: function(code, lang) {
+    highlight: function (code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
@@ -172,30 +172,32 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontmatter, content } = matter(markdownWithMeta);
 
-  let tip: number;
-  let end: number;
-  const max = getPosts().length;
-  const randomPage = Math.floor(Math.random() * (max + 1));
-  if (randomPage + 6 == max) {
-    tip = randomPage;
-    end = max;
-  } else if (randomPage + 6 > max) {
-    const distance = max - randomPage;
-    tip = randomPage - 6 + distance;
-    end = max;
-  } else if (randomPage + 6 < max) {
-    tip = randomPage;
-    end = randomPage + 6;
-  } else {
-    //この条件に達することはバグらない限りない
-    //というかLinterうっせえよ。
-    tip = 0;
-    end = 0;
-  }
+  // let tip: number;
+  // let end: number;
+  // const max = getPosts().length;
+  // const randomPage = Math.floor(Math.random() * (max + 1));
+  // if (randomPage + 6 == max) {
+  //   tip = randomPage;
+  //   end = max;
+  // } else if (randomPage + 6 > max) {
+  //   const distance = max - randomPage;
+  //   tip = randomPage - 6 + distance;
+  //   end = max;
+  // } else if (randomPage + 6 < max) {
+  //   tip = randomPage;
+  //   end = randomPage + 6;
+  // } else {
+  //   //この条件に達することはバグらない限りない
+  //   //というかLinterうっせえよ。
+  //   tip = 0;
+  //   end = 0;
+  // }
 
   return {
     props: {
-      posts: getPosts().slice(tip, end),
+      posts: getPosts()
+        .sort((_a, _b) => Math.random() - 0.5)
+        .slice(0, 6),
       frontmatter,
       content,
       slug,
