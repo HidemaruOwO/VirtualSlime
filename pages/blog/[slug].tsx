@@ -32,7 +32,7 @@ export default function PostPage({
 }) {
   marked.setOptions({
     langPrefix: "",
-    highlight: function (code, lang) {
+    highlight: function(code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
   });
