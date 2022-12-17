@@ -1,6 +1,6 @@
 ---
 title: "【GitHub】GitHubにSSH接続する方法"
-date: "20221224"
+date: "20221216"
 excerpt: "GitHub では 2021年の8月13日 にパスワード認証が廃止されたので、重い腰をあげて SSH で GitHub にアクセスするように設定します。"
 cover_image: "/images/posts/img7.jpeg"
 category: "Git"
