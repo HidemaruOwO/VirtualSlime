@@ -12,7 +12,7 @@ type Props = {
 
 export default function Post({ post, compact }: Props) {
   return (
-    <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
+    <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-2">
       {!compact && (
         <Image
           src={post.frontmatter.cover_image}
