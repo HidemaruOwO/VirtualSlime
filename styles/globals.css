@@ -5,7 +5,6 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
 @import url("https://indestructibletype-fonthosting.github.io/renner.css");
 
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/highlightjs/styles/atom-one-dark.css";
 @import "./SnsButtons.css";
 @import "./Search.css";
@@ -25,6 +24,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 p {
