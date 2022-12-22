@@ -9,13 +9,11 @@
     "cache-posts": "node scripts/cache.js"
   },
   "dependencies": {
-    "bootstrap": "^5.2.1",
     "gray-matter": "^4.0.3",
     "highlightjs": "^9.16.2",
     "marked": "^2.0.4",
     "next": "^13.0.4",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0"
   },
