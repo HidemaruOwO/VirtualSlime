@@ -30,8 +30,11 @@ export default function PostPage({
   slug,
   posts,
 }) {
+  let renderer = new marked.Renderer();
+
   marked.setOptions({
     langPrefix: "",
+    renderer: renderer,
     highlight: function(code, lang) {
       return hljs.highlightAuto(code, [lang]).value;
     },
