@@ -25,14 +25,14 @@ $ echo $SHELL
 
 実行環境は本番環境のため、自分の dotfiles を使いたくないので、デフォルトのプロンプト等が優秀な fish を使うことにしました
 
-<span style="color: red">これから変更する shell は fish なので、fish の部分を読者様が変更したいシェルに変更してください </span>
+`これから変更する shell は fish なので、fish の部分を読者様が変更したいシェルに変更してください`
 
 ```bash
 $ chsh -s $(which fish)
 chsh: PAM: Authentication failure
 ```
 
-今回のタイトルである <span style="color: red">chsh: PAM: Authentication failure</span> が出ました
+今回のタイトルである`chsh: PAM: Authentication failure` が出ました
 これをどうやって解決したか書きます
 
 ## 解決方法
@@ -43,5 +43,5 @@ chsh: PAM: Authentication failure
 $ sudo chsh $USER -s $(which fish)
 ```
 
-これで再ログインしてあげればシェルが fish に変わります<br/>
+これで再ログインしてあげればシェルが fish に変わります  
 他の解決方法だと **/etc/passwd** を書き換えてあげるのも良さそうです

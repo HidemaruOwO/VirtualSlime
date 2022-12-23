@@ -38,7 +38,7 @@ $ brew install nkf
 ### 使い方
 
 使い方は以下の通りです  
-引数に -u と -w がありますが、それはそれぞれ <span style="color: red">Unix</span>(LF) と <span style="color: red">Windows</span>(CR+LF) の訳です
+引数に -u と -w がありますが、それはそれぞれ `Unix`(LF) と `Windows`(CR+LF) の訳です
 
 #### CRLF to LF
 
