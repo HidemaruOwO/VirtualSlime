@@ -58,6 +58,10 @@ ol {
   overflow: auto;
 }
 
+.blog-text pre>code {
+  color: white !important;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -223,4 +227,8 @@ h1 {
 
 .text-indigo-300-important {
   color: #a5b4fc;
+}
+
+.blog-text code {
+  color: red;
 }
