@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
-import hljs from "highlightjs";
 import React, { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -15,6 +14,7 @@ import TableContents from "../../components/TableConetnts";
 import { convDate } from "../../utils/index";
 import Post from "../../components/Post";
 import { getPosts } from "../../lib/posts";
+import CodeBlock from "../../components/CodeBlock";
 
 export default function PostPage({
   frontmatter: {
@@ -30,15 +30,6 @@ export default function PostPage({
   slug,
   posts,
 }) {
-  let renderer = new marked.Renderer();
-
-  marked.setOptions({
-    langPrefix: "",
-    renderer: renderer,
-    highlight: function(code, lang) {
-      return hljs.highlightAuto(code, [lang]).value;
-    },
-  });
   const [tableContents, setTableContents] = useState();
   const contentRef = useRef();
   const router = useRouter();
@@ -58,7 +49,6 @@ export default function PostPage({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
           crossOrigin="anonymous"
         />
-
         <meta property="og:title" content={title} />
         <meta property="og:description" content={excerpt} />
         <meta property="og:type" content="article" />
@@ -118,12 +108,12 @@ export default function PostPage({
           </details>
         </div>
         <div className="blog-text mt-2">
-          <div
-            ref={contentRef}
-            dangerouslySetInnerHTML={{
-              __html: marked(content),
-            }}
-          ></div>
+          <div ref={contentRef}>
+            <ReactMarkdown
+              children={content}
+              components={{ code: CodeBlock }}
+            />
+          </div>
           <script
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"

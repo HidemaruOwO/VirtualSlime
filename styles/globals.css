@@ -48,7 +48,7 @@ ol {
   font-weight: bold;
   margin: 10px 0;
 }
-
+/*
 .blog-text pre {
   color: #ffffff;
   background: #282c34;
@@ -57,7 +57,7 @@ ol {
   line-height: 2.3;
   overflow: auto;
 }
-
+*/
 .blog-text pre>code {
   color: white !important;
 }
