@@ -4,7 +4,7 @@ date: "20221216"
 excerpt: "GitHub では 2021年の8月13日 にパスワード認証が廃止されたので、重い腰をあげて SSH で GitHub にアクセスするように設定します。"
 cover_image: "/images/posts/img7.jpeg"
 category: "Git"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 
@@ -47,7 +47,7 @@ Enter same passphrase again:
 Your identification has been saved in /Users/hidemaru/.ssh/id_rsa
 Your public key has been saved in /Users/hidemaru/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:eI0Zh4BhNVfnFF9WFquUo4O82WE07SFE/K3LKqD/o58 hidemaru@HidemarunoMacBook-Air.local
+SHA256:eI0Zh4BhNVfnFF9WFquUo4O82WE07SFE/K3LKqD/o58 hidemaru@ひでまるnoMacBook-Air.local
 The key's randomart image is:
 +---[RSA 3072]----+
 |    o++ ..+o+. .B|
@@ -118,7 +118,7 @@ $ chmod 600 seacret/github.pem
 $ ssh git@github.com -i ~/.ssh/seacret/github.pem
 
 PTY allocation request failed on channel 0
-Hi HidemaruOwO! You've successfully authenticated, but GitHub does not provide shell access.
+Hi ひでまるOwO! You've successfully authenticated, but GitHub does not provide shell access.
 Connection to github.com closed.
 ```
 

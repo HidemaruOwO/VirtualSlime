@@ -4,7 +4,7 @@ date: "20221218"
 excerpt: "Goの関数の引数にオプションを実装する方法が気になったので、忘備録としてここに記録します。"
 cover_image: "/images/posts/img8.jpeg"
 category: "Go"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 

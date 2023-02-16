@@ -4,7 +4,7 @@ date: "20221217"
 excerpt: "Go でポインタを触る際予め整理したいので、まとめたことを忘備録としてここに記録します"
 cover_image: "/images/posts/img9.jpeg"
 category: "Go"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "【Vim】シンプルで高速なプラグインマネージャー vim-jetpack"
+title: "【Vim】シンプルで高速なプラグインマネージャー vim-jetpackのインストール方法と設定について"
 date: "20220916"
 excerpt: "Vimにはプラグインマネージャーが無数にあるので、シンプルで高速なおすすめのプラグインマネージャーを一つ書き残そうと思います"
 cover_image: "/images/posts/img4.jpeg"
 category: "Vim"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 
-Vim にはプラグインマネージャーが無数にあるので、シンプルで高速なおすすめのプラグインマネージャーを一つ書き残そうと思います
+Jetpack というシンプルで高速なおすすめのプラグインマネージャーを一つ書き残そうと思います
 
 ## プラグインマネージャー
 

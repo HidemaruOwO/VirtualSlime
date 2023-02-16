@@ -4,7 +4,7 @@ date: "20220910"
 excerpt: "GeForce nowを使わないPlayCoverでnativeに原神を遊ぶ方法"
 cover_image: "/images/posts/img3.jpeg"
 category: "Mac"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 

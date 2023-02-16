@@ -4,7 +4,7 @@ date: "20221002"
 excerpt: "昨今SSDの容量が圧迫し始めたので、Macを初期化したのでNeoVimのビルドの忘備録を書き残したいと思います"
 cover_image: "/images/posts/img5.jpeg"
 category: "Mac"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 

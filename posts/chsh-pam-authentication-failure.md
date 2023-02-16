@@ -4,7 +4,7 @@ date: "20220907"
 excerpt: "chshを実行した際にPAM: Authentication failureと返された時の対処法"
 cover_image: "/images/posts/img1.jpeg"
 category: "Linux"
-author: "Hidemaru"
+author: "ひでまる"
 author_image: "/images/authors/hidemaru.png"
 ---
 
