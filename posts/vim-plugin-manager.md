@@ -47,10 +47,13 @@ curl -fLo ~/.config/nvim/autoload/jetpack.vim --create-dirs https://raw.githubus
 
 ### プラグインの追加
 
+ここではインストールするプラグインを定義してます  
 Jetpack は複数の DSL に対応しているので、様々な書き方でプラグインをインストールすることができます  
 筆者はシンプルな`vim-plug`方式で使ってます
 
 #### vim-plug style
+
+この方式の場合は`Jetpack 'repo名'`
 
 ```vim
 call jetpack#begin()
