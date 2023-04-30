@@ -17,11 +17,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-loading-skeleton": "^3.1.1",
-    "react-markdown": "^8.0.4",
-    "react-syntax-highlighter": "^15.5.0",
-    "react-twitter-embed": "^4.0.4",
-    "rehype-raw": "^6.1.1",
-    "shiki": "^0.12.1"
+    "zenn-content-css": "^0.1.106",
+    "zenn-embed-elements": "^0.1.106",
+    "zenn-markdown-html": "^0.1.106"
   },
   "devDependencies": {
     "@types/node": "18.11.9",

@@ -32,15 +32,6 @@ p {
   line-height: 1.8;
 }
 
-.blog-text a {
-  color: #4aac00;
-  text-decoration: none;
-}
-.blog-text a:hover {
-  color: #4aac00;
-  border-bottom: 1px solid;
-}
-
 .blog-text ul,
 ol {
   font-size: 110%;
