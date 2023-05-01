@@ -74,7 +74,7 @@ https://v-sli.me/assets/starrail.gamecontroller.amgp
 大方原神と変わらないと思います。  
 詳しくはこちらをご覧ください
 
-![AntiMicroX View](/images/posts/inside/img21.png)
+![AntiMicroX View](/images/posts/inside/img22.png)
 
 ## 終わりに
 
