@@ -1,7 +1,7 @@
 ---
 title: "【崩スタ】PCでコントローラーを使って遊ぶ方法"
 date: "20230501"
-excerpt: ""
+excerpt: "昨今、miHoYo がつくったゲームということで、崩壊スターレイルを始めました。  ここでタイトルに戻るのですが、私は普段原神はコントローラーでプレイしてます。  しかし、スターレイルではコントローラーが対応していhません。  そのため AntiMichroX で対応したいと思います。"
 cover_image: "/images/posts/img12.png"
 category: "Starrail"
 author: "ひでまる"
