@@ -67,7 +67,14 @@ https://v-sli.me/assets/starrail.gamecontroller.amgp
 崩壊スターレイルは管理者権限が必要なソフトなため、同じくそうしたら AntiMicroX を管理者権限で起動してください
 毎度コントローラーで遊ぶにはこの方法で起動する必要があるため記憶しておいてください
 
-![AntiMicroX Search Run Admin Ilmage](/images/posts/inside/img21.png)
+![AntiMicroX Search Run Admin Image](/images/posts/inside/img21.png)
+
+#### 操作方法について
+
+大方原神と変わらないと思います。  
+詳しくはこちらをご覧ください
+
+![AntiMicroX View](/images/posts/inside/img21.png)
 
 ## 終わりに
 
