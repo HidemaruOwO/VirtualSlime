@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/cache.js && next build && next export && next-export-optimize-images && next-sitemap",
+    "build": "git submodule update && node scripts/cache.js && next build && next export && next-export-optimize-images && next-sitemap",
     "start": "next start",
     "cache-posts": "node scripts/cache.js"
   },
