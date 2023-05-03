@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import React, { useEffect, useRef, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import RehypeRaw from "rehype-raw";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -15,8 +13,8 @@ import TableContents from "../../components/TableConetnts";
 import { convDate } from "../../utils/index";
 import Post from "../../components/Post";
 import { getPosts } from "../../lib/posts";
-import CodeBlock from "../../components/CodeBlock";
-import markdownToHtml from "zenn-markdown-html";
+import markdownToHtml from "../../oreore-zenn-markdown-html";
+import Script from "next/script";
 
 export default function PostPage({
   frontmatter: {
@@ -53,6 +51,7 @@ export default function PostPage({
   const H6 = ({ node, ...props }) => {
     return <h6 id={node.position?.start.line.toString()}>{props.children}</h6>;
   };
+
   useEffect(() => {
     const headings = contentRef.current.querySelectorAll("h2, h3, h4, h5, h6");
     setTableContents(<TableContents headings={headings} />);
@@ -61,8 +60,8 @@ export default function PostPage({
   return (
     <Layout title={title} keywords={category} description={excerpt}>
       <Head>
-        <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script>
-        <script
+        <Script src="https://embed.zenn.studio/js/listen-embed-event.js" />
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
           crossOrigin="anonymous"

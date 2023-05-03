@@ -65,11 +65,7 @@ Ver3.5 の PU キャラは前半に、ディシアとセノ。後半にに綾華
 
 @[tweet](https://twitter.com/Jeonkei_0915/status/1626560375952130048)
 
-https://zenn.dev/zenn/articles/markdown-guide#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF
-
-```twitter
-1626557837580341248
-```
+@[tweet](https://twitter.com/Jeonkei_0915/status/1626557837580341248)
 
 こんなボロクソに言いましたが、ブリュー祭は楽しみにしてます。  
 miHoYo さん頑張ってください！！

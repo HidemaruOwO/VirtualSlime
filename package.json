@@ -17,9 +17,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-loading-skeleton": "^3.1.1",
-    "zenn-content-css": "^0.1.106",
-    "zenn-embed-elements": "^0.1.106",
-    "zenn-markdown-html": "^0.1.106"
+    "zenn-content-css": "0.1.108",
+    "zenn-embed-elements": "0.1.108",
+    "zenn-markdown-html": "0.1.108"
   },
   "devDependencies": {
     "@types/node": "18.11.9",
