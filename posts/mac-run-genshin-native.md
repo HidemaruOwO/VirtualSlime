@@ -14,7 +14,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ### Play Cover
 
-[![PlayCover/PlayCover - GitHub](https://gh-card.dev/repos/PlayCover/PlayCover.svg?fullname=)](https://github.com/PlayCover/PlayCover)
+https://github.com/PlayCover/PlayCover
 
 #### なんだそれは
 
@@ -24,9 +24,17 @@ PlayCover とは M1 シリーズや M2 などの Apple Silicon デバイスで i
 #### インストール
 
 下記リンクをクリックして PlayCover をダウンロードしてください。  
-[Play Cover_2.0.1.dmg](https://github.com/PlayCover/PlayCover/releases/download/2.0.1/PlayCover_2.0.1.dmg)  
+
+https://github.com/PlayCover/PlayCover/releases/download/2.0.1/PlayCover_2.0.1.dmg
+
 (記事更新時: PlayCover Version: 2.0.1)  
 ダウンロードしたら **.dmg** ファイルを展開して、Application Folder に Play Cover をコピーしましょう。
+
+:::message
+最新版をインストールしたい方は下記リンクからダウンロードしてください
+:::
+
+https://github.com/PlayCover/PlayCover/releases/
 
 ## 原神をインストール
 
@@ -58,4 +66,4 @@ PlayCover とは M1 シリーズや M2 などの Apple Silicon デバイスで i
 
 公式サーバーに入っていると、PlayCover の最新情報や他のゲームの **.ipa** ファイルをダウンロードできて便利です
 
-[PlayCover 公式サーバー](https://discord.gg/rMv5qxGTGC)
+https://discord.gg/rMv5qxGTGC

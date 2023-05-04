@@ -17,14 +17,17 @@ Jetpack というシンプルで高速なおすすめのプラグインマネー
 
 ## vim-jetpack
 
-[![tani/vim-jetpack - GitHub](https://gh-card.dev/repos/tani/vim-jetpack.svg?fullname=)](https://github.com/tani/vim-jetpack)
+https://github.com/tani/vim-jetpack
 
 ### なんだこれは
 
 `vim-jetpack`開発者の方の Zenn の記事によると、
 
-> vim-jetpack は vim-plug の実装を vim8/neovim 向けにモダン化させ dein.vim で用いられている最適化手法を取り入れた，Packer.nvim 風のコマンド郡を備えたとても高速なプラグインマネージャです  
-> 引用: [とても速い Vim プラグインマネージャ vim-jetpack](https://zenn.dev/dog/articles/jetpack_intro)
+> vim-jetpack は vim-plug の実装を vim8/neovim 向けにモダン化させ dein.vim で用いられている最適化手法を取り入れた，Packer.nvim 風のコマンド郡を備えたとても高速なプラグインマネージャです
+
+引用: 
+
+https://zenn.dev/dog/articles/jetpack_intro
 
 とにかくプラグインマネージャーをカスタマイズをしていない状態で、高速で Vim を起動できるプラグインマネージャーです  
 詳しく`vim-jetpack`を知りたい場合は引用元の記事をお読みください

@@ -16,7 +16,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ## NeoVim
 
-[![neovim/neovim - GitHub](https://gh-card.dev/repos/neovim/neovim.svg)](https://github.com/neovim/neovim)
+https://github.com/neovim/neovim
 
 ### なんだこれは
 
@@ -30,7 +30,10 @@ NeoVim の公式のビルドの必要要件を見てみると、
 
 > Clang or GCC version 4.4+  
 > CMake version 3.10+, built with TLS/SSL support  
-> 引用: [Build prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
+
+引用: 
+
+https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites
 
 このようになっております  
 `Clang`のバージョンを確認してみると、14.0.0 なので特に変更することはありません
