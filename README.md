@@ -5,11 +5,19 @@
 ### Install Dependencies
 
 ```bash
-yarn install
+bun install
 ```
 
 ### Run Dev Server (http://localhost:3000)
 
 ```bash
-yarn dev
+bun run dev
+```
+
+### Build and Hosting
+
+```bash
+bun run build
+
+bun run start
 ```
