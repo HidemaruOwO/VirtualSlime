@@ -36,7 +36,7 @@
     "eslint-plugin-react": "^7.31.7",
     "eslint-prettier": "^0.0.0-empty",
     "imagemin-svgo": "^10.0.1",
-    "next-export-optimize-images": "^1.9.0",
+    "next-export-optimize-images": "^3.1.0",
     "next-optimized-images": "^2.6.2",
     "next-sitemap": "^3.1.32",
     "postcss": "^8.4.16",
