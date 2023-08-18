@@ -1,3 +1,6 @@
 [submodule "oreore-zenn-markdown-html"]
 	path = oreore-zenn-markdown-html
 	url = https://github.com/HidemaruOwO/oreore-zenn-markdown-html.git
+[submodule "VirtualSlime-API"]
+	path = VirtualSlime-API
+	url = https://github.com/HidemaruOwO/VirtualSlime-API.git
