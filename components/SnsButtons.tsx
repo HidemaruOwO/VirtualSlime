@@ -13,7 +13,7 @@ export default function SnsButtons({ title }: Props) {
   const sites: Site[] = [
     { name: "twitter", url: "https://twitter.com/intent/tweet?url=" },
     { name: "facebook", url: "https://www.facebook.com/sharer/sharer.php?u=" },
-    { name: "instagram", url: "https://www.instagram.com/" },
+    { name: "line", url: "https://social-plugins.line.me/lineit/share?url=" },
   ];
 
   const router = useRouter();
@@ -28,8 +28,8 @@ export default function SnsButtons({ title }: Props) {
       <a href={sites[1].url + title + "\n" + url}>
         <i className="zmdi zmdi-facebook"></i>
       </a>
-      <a href={sites[2].url + title + "\n" + url}>
-        <i className="zmdi zmdi-instagram"></i>{" "}
+      <a href={sites[2].url + url}>
+        <i className="icon-line"></i>{" "}
       </a>
     </div>
   );

@@ -5,6 +5,7 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
 @import url("https://indestructibletype-fonthosting.github.io/renner.css");
 
+@import "./icomoon/style.css";
 @import "../node_modules/highlightjs/styles/atom-one-dark.css";
 @import "./SnsButtons.css";
 @import "./Search.css";
@@ -49,7 +50,7 @@ ol {
   overflow: auto;
 }
 */
-.blog-text pre>code {
+.blog-text pre > code {
   color: white !important;
 }
 

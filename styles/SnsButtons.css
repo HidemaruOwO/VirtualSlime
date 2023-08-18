@@ -63,7 +63,7 @@
   position: absolute;
   right: 30px;
   bottom: 30px;
-  background: #e1306c;
+  background: #4cc764;
 }
 .menu-button:hover a {
   opacity: 1;
@@ -98,5 +98,5 @@
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
-  background: #c13584;
+  background: #06c755;
 }
