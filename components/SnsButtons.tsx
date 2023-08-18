@@ -21,7 +21,7 @@ export default function SnsButtons({ title }: Props) {
   const url = "https://v-sli.me" + router.asPath;
 
   return (
-    <div className="menu-button">
+    <a className="menu-button">
       <i className="zmdi zmdi-share"></i>
       <a
         href={sites[0].url + title + "\n" + url}
@@ -54,6 +54,6 @@ export default function SnsButtons({ title }: Props) {
           </div>
         </div>
       </a>
-    </div>
+    </a>
   );
 }
