@@ -30,7 +30,7 @@ try {
   fs.mkdirSync("cache");
 }
 
-fs.writeFile("cache/data.ts", postData(), function (err) {
+fs.writeFile("public/data.ts", postData(), function (err) {
   if (err) return console.log(err);
   console.log("Posts Cached...");
 });
