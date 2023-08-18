@@ -137,8 +137,8 @@
   background: #06c755;
 }
 .menu-button:hover a:nth-child(5) {
-  right: 120px;
-  bottom: 120px;
+  right: 110px;
+  bottom: 110px;
 }
 .menu-button:hover a:nth-child(5):hover {
   -webkit-transition-delay: 0s;
