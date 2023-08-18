@@ -23,16 +23,28 @@ export default function SnsButtons({ title }: Props) {
   return (
     <div className="menu-button">
       <i className="zmdi zmdi-share"></i>
-      <a href={sites[0].url + title + "\n" + url}>
+      <a
+        href={sites[0].url + title + "\n" + url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="zmdi zmdi-twitter"></i>
       </a>
-      <a href={sites[1].url + title + "\n" + url}>
+      <a
+        href={sites[1].url + title + "\n" + url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="zmdi zmdi-facebook"></i>
       </a>
-      <a href={sites[2].url + url}>
+      <a href={sites[2].url + url} target="_blank" rel="noopener noreferrer">
         <i className="icon-line"></i>
       </a>
-      <a href={sites[3].url + title + "\n" + url}>
+      <a
+        href={sites[3].url + title + "\n" + url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div
           className="relative mx-auto"
           style={{ width: 66 + "px", height: 66 + "px" }}
