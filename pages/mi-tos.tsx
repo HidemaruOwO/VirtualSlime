@@ -442,6 +442,15 @@ export default function PrivacyPolicyPage() {
           </>
         }
       />
+      <Section
+        title={"プライバシーポリシー"}
+        content={
+          <ExternalUrl
+            content={"プライバシーポリシー"}
+            url="https://v-sli.me/privacy-policy"
+          />
+        }
+      />
 
       <Section
         title="本ページについて"
@@ -471,7 +480,7 @@ export default function PrivacyPolicyPage() {
         }
       />
       <Section
-        title="プライバシーポリシーの制定日及び改定日"
+        title="本規約の制定日及び改定日"
         content={<>制定: 2023年8月19日</>}
       />
     </Layout>
