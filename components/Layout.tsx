@@ -7,7 +7,7 @@ export default function Layout({ title, keywords, description, children }) {
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{title} | Virtual Slime</title>
         <meta charSet="utf-8" />
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
