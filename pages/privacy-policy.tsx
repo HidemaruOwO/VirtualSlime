@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
         content={
           <>
             Virtual Slime
-            (以下「本サイト」という)は、ユーザーの個人情報について以下のとおりプライバシーポリシー(以下「本ポリシー」という)を定めます。
+            (以下「本サイト」と言います)は、ユーザーの個人情報について以下のとおりプライバシーポリシー(以下「本ポリシー」という)を定めます。
             <br />
             また、
             <ExternalUrl content={"ぷよすきー"} url="https://mi.v-sli.me" />
