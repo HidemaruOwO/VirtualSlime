@@ -13,7 +13,7 @@ function Section({ title, content }) {
 export default function PrivacyPolicyPage() {
   return (
     <Layout
-      title="Privacy Policy"
+      title="プライバシーポリシー"
       description="Virtual Slimeのプライバシーポリシー"
     >
       <h1 className="mx-4 text-5xl border-b-4 pb-5 font-bold">
