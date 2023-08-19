@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import React from "react";
 
-function PrivacySection({ title, content }) {
+function Section({ title, content }) {
   return (
     <div className="bg-white shadow-md rounded-lg px-10 py-6 mt-6">
       <h3 className="text-2xl mb-4 font-semibold">{title}</h3>
@@ -10,17 +10,14 @@ function PrivacySection({ title, content }) {
   );
 }
 
-export default function PrivacyPolicyPage() {
+export default function PolicyPage() {
   return (
-    <Layout
-      title="Privacy Policy"
-      description="Virtual Slimeのプライバシーポリシー"
-    >
+    <Layout title=" Policy" description="Virtual Slimeのプライバシーポリシー">
       <h1 className="mx-4 text-5xl border-b-4 pb-5 font-bold">
         プライバシーポリシー
       </h1>
 
-      <PrivacySection
+      <Section
         title="プライバシーポリシー(個人情報保護方針)"
         content={
           <>
@@ -32,7 +29,7 @@ export default function PrivacyPolicyPage() {
         }
       />
 
-      <PrivacySection
+      <Section
         title="1.管理者情報"
         content={
           <>
@@ -42,12 +39,12 @@ export default function PrivacyPolicyPage() {
         }
       />
 
-      <PrivacySection
+      <Section
         title="2.個人情報の取得方法"
         content="本サイトのサービスでユーザーが利用登録をするとき、メールアドレスなど個人を特定できる情報を取得させていただきます。"
       />
 
-      <PrivacySection
+      <Section
         title="3.個人情報の利用目的"
         content={
           <>
@@ -58,11 +55,11 @@ export default function PrivacyPolicyPage() {
         }
       />
 
-      <PrivacySection
+      <Section
         title="4.個人データの第三者提供について"
         content="本サイトは、個人データを第三者に提供することは致しません。"
       />
-      <PrivacySection
+      <Section
         title="5.保有個人データの開示、訂正"
         content={
           <>
@@ -72,11 +69,11 @@ export default function PrivacyPolicyPage() {
           </>
         }
       />
-      <PrivacySection
+      <Section
         title="6.個人情報取り扱いに関する相談や苦情の連絡先"
         content="本サイトの個人情報の取り扱いに関するご質問やご不明点、苦情、その他のお問い合わせは以下の連絡先よりご連絡ください。"
       />
-      <PrivacySection
+      <Section
         title="7.SSL(Secure Socket Layer)について"
         content={
           <>
@@ -86,7 +83,7 @@ export default function PrivacyPolicyPage() {
           </>
         }
       />
-      <PrivacySection
+      <Section
         title="8.cookieについて"
         content={
           <>
@@ -100,7 +97,7 @@ export default function PrivacyPolicyPage() {
           </>
         }
       />
-      <PrivacySection
+      <Section
         title="9.プライバシーポリシーの制定日及び改定日"
         content={
           <>
