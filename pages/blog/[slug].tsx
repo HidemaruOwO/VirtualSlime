@@ -60,9 +60,12 @@ export default function PostPage({
   return (
     <Layout title={title} keywords={category} description={excerpt}>
       <Head>
-        <Script src="https://embed.zenn.studio/js/listen-embed-event.js" />
         <Script
-          async
+          defer
+          src="https://embed.zenn.studio/js/listen-embed-event.js"
+        />
+        <Script
+          defer
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
           crossOrigin="anonymous"
         />

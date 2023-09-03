@@ -17,10 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           __html: initTwitterScriptInner,
         }}
       />
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-      ></script>
+      <script defer src="https://platform.twitter.com/widgets.js"></script>
       <Component {...pageProps} />
     </>
   );
