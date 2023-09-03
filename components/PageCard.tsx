@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useRef } from "react";
 
 const PageCard = ({ url }) => {
@@ -13,6 +14,7 @@ const PageCard = ({ url }) => {
 
   return (
     <iframe
+      title="page card"
       ref={iframeRef}
       className="m-auto w-full"
       frameBorder="0"

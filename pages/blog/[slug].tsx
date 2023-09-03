@@ -36,22 +36,6 @@ export default function PostPage({
   const domain: string = "https://v-sli.me";
   const url = domain + router.asPath;
 
-  const H2 = ({ node, ...props }) => {
-    return <h2 id={node.position?.start.line.toString()}>{props.children}</h2>;
-  };
-  const H3 = ({ node, ...props }) => {
-    return <h3 id={node.position?.start.line.toString()}>{props.children}</h3>;
-  };
-  const H4 = ({ node, ...props }) => {
-    return <h4 id={node.position?.start.line.toString()}>{props.children}</h4>;
-  };
-  const H5 = ({ node, ...props }) => {
-    return <h5 id={node.position?.start.line.toString()}>{props.children}</h5>;
-  };
-  const H6 = ({ node, ...props }) => {
-    return <h6 id={node.position?.start.line.toString()}>{props.children}</h6>;
-  };
-
   useEffect(() => {
     const headings = contentRef.current.querySelectorAll("h2, h3, h4, h5, h6");
     setTableContents(<TableContents headings={headings} />);
@@ -114,7 +98,7 @@ export default function PostPage({
               height={40}
               className="mx-4 object-cover rounded-full hidden sm:block"
             />
-            <h4>{author}</h4>
+            <p>{author}</p>
           </div>
           <div className="mr-4">{convDate(date)}</div>
         </div>
@@ -136,11 +120,6 @@ export default function PostPage({
             }}
           ></div>
           <br />
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
-            crossOrigin="anonymous"
-          ></script>
           <ins
             className="adsbygoogle"
             style={{ display: "block" }}

@@ -21,24 +21,24 @@ export default function SnsButtons({ title }: Props) {
   const url = "https://v-sli.me" + router.asPath;
 
   return (
-    <a className="menu-button">
-      <i className="zmdi zmdi-share"></i>
+    <div className="menu-button">
+      <i title="share button" className="zmdi zmdi-share"></i>
       <a
         href={sites[0].url + title + "\n" + url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="zmdi zmdi-twitter"></i>
+        <i title="twitter button" className="zmdi zmdi-twitter"></i>
       </a>
       <a
         href={sites[1].url + title + "\n" + url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="zmdi zmdi-facebook"></i>
+        <i title="facebook button" className="zmdi zmdi-facebook"></i>
       </a>
       <a href={sites[2].url + url} target="_blank" rel="noopener noreferrer">
-        <i className="icon-line"></i>
+        <i title="line button" className="icon-line"></i>
       </a>
       <a
         href={sites[3].url + title + "\n" + url}
@@ -50,10 +50,15 @@ export default function SnsButtons({ title }: Props) {
           style={{ width: 66 + "px", height: 66 + "px" }}
         >
           <div className="text-center m-auto absolute inset-x-0 inset-y-0 w-12 h-12">
-            <img width={32} height={32} src="/images/misskey-logo.svg" />
+            <img
+              alt="misskey-logo"
+              width={32}
+              height={32}
+              src="/images/misskey-logo.svg"
+            />
           </div>
         </div>
       </a>
-    </a>
+    </div>
   );
 }
