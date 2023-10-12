@@ -21,7 +21,7 @@ function postData() {
     };
   });
 
-  return `export const posts = ${JSON.stringify(posts)}`;
+  return JSON.stringify(posts);
 }
 
 try {
@@ -30,7 +30,7 @@ try {
   fs.mkdirSync("cache");
 }
 
-fs.writeFile("public/data.ts", postData(), function (err) {
+fs.writeFile("public/data.json", postData(), function (err) {
   if (err) return console.log(err);
   console.log("Posts Cached...");
 });

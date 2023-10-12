@@ -13,7 +13,7 @@ export default function Search() {
       } else {
         // const res = await fetch(`/api/search?q=${searchTerm}`);
         const res = await fetch(
-          `https://api.v-sli.me/api/posts?q=${searchTerm}`
+          `https://api.v-sli.me/v1/posts?q=${searchTerm}`
         );
         const { results } = await res.json();
         setSearchResults(results);
@@ -27,7 +27,7 @@ export default function Search() {
     <div className="relative bg-gray-900 p-4 h-12">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
         <div className="relative text-gray-600 w-82 bottom-3">
-          {/*  
+          {/*
 <form>
             <input
               type="search"
