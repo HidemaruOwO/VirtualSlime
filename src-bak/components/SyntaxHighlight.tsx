@@ -24,7 +24,7 @@ const theme = loadTheme(path.join(shikiDirectory, "/themes/material-palenight.js
 const languages: ShikiLanguages[] = [];
 
 export default function SyntaxHighlight(props: Props) {
-  let language: ShikiLanguages = {
+  const language: ShikiLanguages = {
     id: props.languagesProps.id,
     scopeName: props.languagesProps.scopeName,
     path: path.join(
