@@ -1,4 +1,9 @@
 {
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-astro-organize-imports"
+  ],
   "tabWidth": 2,
   "trailingComma": "es5",
   "semi": true
