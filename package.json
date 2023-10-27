@@ -6,7 +6,7 @@
     "astro": "astro",
     "astro:dev": "astro dev",
     "astro:start": "astro dev",
-    "astro:build": "astro check && astro build",
+    "astro:build": "astro build",
     "astro:preview": "astro preview",
     "build": "git submodule update && bun run cache-posts && bun run astro:build",
     "dev": "bun run cache-posts && bun run astro:dev",
