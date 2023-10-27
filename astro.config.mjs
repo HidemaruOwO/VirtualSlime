@@ -12,4 +12,9 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  vite: {
+    ssr: {
+      noExternal: ["react-icons"],
+    },
+  },
 });
