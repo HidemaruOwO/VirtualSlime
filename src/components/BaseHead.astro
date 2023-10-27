@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+
+import { URL } from "../consts";
+
+type Props = {
+  title: string;
+  keywords: string;
+  description: string;
+  dir: string;
+};
+let {
+  title = "Welcome to Virtual Slime",
+  keywords = "development, virtual slime, coding, programming, linux, rust, python, javascript, go, typescript, hidemaru",
+  description = "便利なツールを作るのが好きなエンジニアのブログとそのツールです",
+  dir,
+} = Astro.props;
+title = `${title} | Virtual Slime`;
+---
+
+<script
+  defer
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3960648628437030"
+  cross-origin="anonymous"></script>
+
+<link rel="preload" as="font" />
+<link rel="icon" href="/favicon.ico" />
+<!-- <link -->
+<!--   rel="stylesheet" -->
+<!--   href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" -->
+<!-- /> -->
+
+<meta charset="UTF-8" />
+<meta name="keywords" content={keywords} />
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<meta property="og:url" content={URL + dir} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={URL + "/graph.png"} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Hidemaru_OwO" />
+<meta name="twitter:creator" content="@Hidemaru_OwO" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
