@@ -3,7 +3,6 @@ import CategoryLabel from "./CategoryLabel";
 import { convDate } from "../utils/index";
 import type { BasePost } from "../interface";
 import Image from "next/image";
-import React from "react";
 
 type Props = {
   post: BasePost;
@@ -12,17 +11,17 @@ type Props = {
 
 export default function Post({ post, compact }: Props) {
   return (
-    <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-2">
+    <div className="mt-2 w-full rounded-lg bg-white px-10 py-6 shadow-md">
       {!compact && (
         <Image
           src={post.frontmatter.cover_image}
-          alt=""
+          alt="Cover Image"
           height={420}
           width={600}
           className="mb-4 rounded"
         />
       )}
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <span className="text-gray-600">{convDate(post.frontmatter.date)}</span>
         <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
       </div>
@@ -30,7 +29,7 @@ export default function Post({ post, compact }: Props) {
       <div className="mt-2">
         <Link
           href={`/blog/${post.slug}`}
-          className="text-2xl text-gray-700 font-bold hover:underline hover:text-gray-700"
+          className="text-2xl font-bold text-gray-700 hover:text-gray-700 hover:underline"
         >
           {post.frontmatter.title}
         </Link>
@@ -38,16 +37,16 @@ export default function Post({ post, compact }: Props) {
       </div>
 
       {compact && (
-        <div className="flex justify-between items-center mt-6">
+        <div className="mt-6 flex items-center justify-between">
           <div className="flex items-center">
             <Image
               src={post.frontmatter.author_image}
               alt="Author Image"
               width={40}
               height={40}
-              className="mx-4 object-cover rounded-full hidden sm:block"
+              className="mx-4 hidden rounded-full object-cover sm:block"
             />
-            <h3 className="text-gray-700 font-bold">
+            <h3 className="font-bold text-gray-700">
               {post.frontmatter.author}
             </h3>
           </div>

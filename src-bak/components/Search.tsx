@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import SearchResults from "./SearchResults";
-import React from "react";
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,9 +23,9 @@ export default function Search() {
   }, [searchTerm]);
 
   return (
-    <div className="relative bg-gray-900 p-4 h-12">
+    <div className="relative h-12 bg-gray-900 p-4">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
-        <div className="relative text-gray-600 w-82 bottom-3">
+        <div className="w-82 relative bottom-3 text-gray-600">
           {/*
 <form>
             <input
