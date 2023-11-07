@@ -1,0 +1,17 @@
+.menu {
+  font-family: "Jost";
+}
+
+.header-title {
+  font-size: 30px;
+  font-family: "coastline";
+}
+
+.header-background {
+  background-image: url("/images/backgrounds/pcondesk.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 50%;
+  min-height: 30vh;
+  max-height: 30vh;
+}
