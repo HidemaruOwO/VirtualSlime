@@ -1,12 +1,12 @@
-import { defineConfig } from "astro/config";
+import { squooshImageService, defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-
 import react from "@astrojs/react";
+import { URL } from "./src/consts";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://v-sli.me",
+  site: URL,
   integrations: [sitemap(), tailwind(), react()],
   tailwindConfig: "./tailwind.config.js",
   server: {
@@ -17,4 +17,8 @@ export default defineConfig({
       noExternal: ["react-icons"],
     },
   },
+  image: {
+    service: squooshImageService(),
+  },
 });
+
