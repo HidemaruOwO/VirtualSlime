@@ -1,0 +1,23 @@
+---
+import type { BasePost } from "../interface";
+import { getPosts } from "../lib/post";
+import Post from "./Post.astro";
+// Post.tsx
+type Props = {
+  length: number;
+};
+
+const { length } = Astro.props;
+
+async function getPostsData() {
+  const posts = getPosts().slice(0, length);
+  return { posts };
+}
+
+const { posts } = await getPostsData();
+// console.log(posts);
+---
+
+<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+  {posts.map((post: BasePost) => <Post post={post} />)}
+</div>
