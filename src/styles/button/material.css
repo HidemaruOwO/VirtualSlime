@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700&display=swap);
+
+.material-button {
+  background: #3d4c53;
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.material-button-second {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin-top: -100px;
+  padding-top: 2px;
+  background: #26a69a;
+  left: -250px;
+  transition: 0.3s;
+}
+.material-button-text {
+  color: white;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  margin-top: 11.5px;
+}
+.material-button-second-text {
+  margin-top: 53.5px;
+  margin-right: -130px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.material-button:hover .material-button-second {
+  /*When hovering over .material-button change .material-button-second*/
+  left: -130px;
+}
+.material-button:hover .material-button-text {
+  /*When hovering over .material-button change .material-button-text*/
+  margin-left: 65px;
+}
+.material-button:active {
+  /*Clicked and held*/
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
