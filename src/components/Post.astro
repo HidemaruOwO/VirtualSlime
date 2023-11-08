@@ -13,10 +13,10 @@ type Props = {
 
 const { compact, post } = Astro.props;
 
-const coverImage = require(`..${post.frontmatter.cover_image}`);
+// const coverImage = require(`..${post.frontmatter.cover_image}`);
 // const authorImage = `..${post.frontmatter.author_image}`;
-// import coverImage from "../images/posts/img14.png";
 import authorImage from "../images/authors/hidemaru.png";
+import coverImage from "../images/posts/img14.png";
 
 const date = convDate(post.frontmatter.date);
 ---
