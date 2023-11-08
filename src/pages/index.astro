@@ -1,7 +1,9 @@
 ---
+import ViewPosts from "../components/ViewPosts.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout dir="/">
-  <h2 class="text-gradient">Welcome to Astro!</h2>
+  <h1 class="border-b-4 p-5 text-5xl font-bold">📮 Latest Articles</h1>
+  <ViewPosts length={6} />
 </Layout>
