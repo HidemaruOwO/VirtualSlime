@@ -47,3 +47,7 @@ h1 {
 .text-indigo-300-important {
   color: #a5b4fc;
 }
+
+.top-screen {
+  top: 100vh;
+}
