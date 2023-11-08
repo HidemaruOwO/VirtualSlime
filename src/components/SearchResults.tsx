@@ -1,4 +1,4 @@
-import Post from "./Post.tsx";
+import Post from "./Post.astro";
 
 type Props = {
   results: any[];
