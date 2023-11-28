@@ -13,10 +13,13 @@ type Props = {
 
 const { compact, post } = Astro.props;
 
-// const coverImage = require(`..${post.frontmatter.cover_image}`);
-// const authorImage = `..${post.frontmatter.author_image}`;
-import authorImage from "../images/authors/hidemaru.png";
-import coverImage from "../images/posts/img14.png";
+function importImage(path: string) {
+  if (path) {
+    return import(/* @vite-ignore */ path);
+  } else {
+    return import(/* @vite-ignore */ "../images/icons/not-found.png");
+  }
+}
 
 const date = convDate(post.frontmatter.date);
 ---
@@ -25,7 +28,7 @@ const date = convDate(post.frontmatter.date);
   {
     !compact && (
       <Image
-        src={coverImage}
+        src={importImage(`..${post.frontmatter.cover_image}`)}
         alt="Cover Image"
         width={600}
         height={420}
@@ -53,7 +56,7 @@ const date = convDate(post.frontmatter.date);
       <div class="mt-6 flex items-center justify-between">
         <div class="flex items-center">
           <Image
-            src={authorImage}
+            src={importImage(`..${post.frontmatter.author_image}`)}
             alt="Author Image"
             width={40}
             height={40}
