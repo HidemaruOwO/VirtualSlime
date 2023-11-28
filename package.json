@@ -13,6 +13,7 @@
     "cache-posts": "bun run scripts/cache.js"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.1.5",
     "@astrojs/react": "latest",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "latest",
@@ -21,7 +22,6 @@
     "@types/react-dom": "latest",
     "astro": "latest",
     "gray-matter": "latest",
-    "node-stdlib-browser": "^1.2.0",
     "path": "^0.12.7",
     "react": "latest",
     "react-dom": "^18.0.0",
