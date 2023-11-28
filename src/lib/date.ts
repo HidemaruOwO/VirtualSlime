@@ -12,3 +12,11 @@ export const convDate = (date: string) => {
     return `${month}月${day}日, ${year}`;
   }
 };
+export const convDateToHyphen = (date: string) => {
+  if (date.length === 8) {
+    const year: string = date.slice(0, 4);
+    const month: string = date.slice(4, 6);
+    const day: string = date.slice(6, 8);
+    return `${year}-${month}-${day}`;
+  }
+};
