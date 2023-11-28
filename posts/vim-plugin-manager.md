@@ -12,7 +12,7 @@ Jetpack というシンプルで高速なおすすめのプラグインマネー
 
 ## プラグインマネージャー
 
-プラグインマネージャーとは数ある Vim プラグインを管理するためにあります  
+プラグインマネージャーとは数ある Vim プラグインを管理するためにあります
 `dein.vim`や`vim-plug`など多くのプラグインマネージャーがありますが、筆者がおすすめするプラグインマネージャーは`vim-jetpack`です
 
 ## vim-jetpack
@@ -25,11 +25,11 @@ https://github.com/tani/vim-jetpack
 
 > vim-jetpack は vim-plug の実装を vim8/neovim 向けにモダン化させ dein.vim で用いられている最適化手法を取り入れた，Packer.nvim 風のコマンド郡を備えたとても高速なプラグインマネージャです
 
-引用: 
+引用:
 
 https://zenn.dev/dog/articles/jetpack_intro
 
-とにかくプラグインマネージャーをカスタマイズをしていない状態で、高速で Vim を起動できるプラグインマネージャーです  
+とにかくプラグインマネージャーをカスタマイズをしていない状態で、高速で Vim を起動できるプラグインマネージャーです
 詳しく`vim-jetpack`を知りたい場合は引用元の記事をお読みください
 
 ### インストール
@@ -50,8 +50,8 @@ curl -fLo ~/.config/nvim/autoload/jetpack.vim --create-dirs https://raw.githubus
 
 ### プラグインの追加
 
-ここではインストールするプラグインを定義してます  
-Jetpack は複数の DSL に対応しているので、様々な書き方でプラグインをインストールすることができます  
+ここではインストールするプラグインを定義してます
+Jetpack は複数の DSL に対応しているので、様々な書き方でプラグインをインストールすることができます
 筆者はシンプルな`vim-plug`方式で使ってます
 
 #### vim-plug style
@@ -122,8 +122,8 @@ require('jetpack').setup {
 
 ### 移行
 
-前述した通り Jetpack は複数の DSL に対応しているので、他のプラグインマネージャーからの移行がとても容易です  
-Vim で`.vimrc`を開いて以下のコマンを実行してください  
+前述した通り Jetpack は複数の DSL に対応しているので、他のプラグインマネージャーからの移行がとても容易です
+Vim で`.vimrc`を開いて以下のコマンを実行してください
 **移行元のプラグインマネージャーの設定はコメントアウトして消してください**
 
 #### vim-plug
@@ -162,7 +162,7 @@ Vim で`.vimrc`を開いて以下のコマンを実行してください
 :Jetpack repo ['user/repo',option]
 ```
 
-このコマンドは`jetpack#add()`をコマンドにしたもので、GitHub リポジトリと option を指定するとプラグインを追加します  
+このコマンドは`jetpack#add()`をコマンドにしたもので、GitHub リポジトリと option を指定するとプラグインを追加します
 dotfiles などで、複数の環境で共有して使っている場合は推奨しません
 
 ### 設定
@@ -185,8 +185,8 @@ let g:jetpack_copy_method='hardlink' " ハードリンクを作成
 let g:jetpack_copy_method="symlink" " シンポリックリンクを作成
 ```
 
-これは`:JetpackSync` した際ファイルをコピーする速度に関する設定です  
-Neovim を使ってる場合は`let g:jetpack_copy_method='copy'`に設定しましょう  
+これは`:JetpackSync` した際ファイルをコピーする速度に関する設定です
+Neovim を使ってる場合は`let g:jetpack_copy_method='copy'`に設定しましょう
 安定していて高速です
 
 #### g:jetpack_download_method
@@ -197,7 +197,7 @@ let g:jetpack_download_method='curl' " プラグインのダウンロードにcu
 let g:jetpack_download_method='wget' " プラグインのダウンロードにwgetを使用
 ```
 
-これは`:JetpackSync`した際ファイルをダウンロードする時に使うコマンドを設定できます  
+これは`:JetpackSync`した際ファイルをダウンロードする時に使うコマンドを設定できます
 `git`が入っていない開発環境なんて聞いたことがないので、デフォルト値の`git`で問題ありません
 
 #### g:jetpack#optimization
@@ -210,5 +210,5 @@ let g:jetpack#optimization=1 " 安全な場合最適化
 let g:jetpack#optimization=2 " 全てのプラグインを最適化
 ```
 
-~~とりあえず`let g:jetpack#optimization=2`で設定しましょう~~  
+~~とりあえず`let g:jetpack#optimization=2`で設定しましょう~~
 ~~もし環境が壊れた場合は`let g:jetpack#optimization=1`に設定しましょう~~
