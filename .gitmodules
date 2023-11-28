@@ -2,3 +2,6 @@
 	path = oreore-zenn-markdown-html
 	url = https://github.com/HidemaruOwO/oreore-zenn-markdown-html
 	branch = master
+[submodule "src/lib/slime-zenn-markdown-html"]
+	path = src/lib/slime-zenn-markdown-html
+	url = https://github.com/HidemaruOwO/slime-zenn-markdown-html.git
