@@ -1,4 +1,5 @@
-import { squooshImageService, defineConfig } from "astro/config";
+import { defineConfig } from "astro/config";
+// import { squooshImageService, defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
@@ -17,8 +18,7 @@ export default defineConfig({
       noExternal: ["react-icons"],
     },
   },
-  image: {
-    service: squooshImageService(),
-  },
+  // image: {
+  //   service: squooshImageService(),
+  // },
 });
-
