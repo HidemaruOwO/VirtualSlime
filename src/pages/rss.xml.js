@@ -1,4 +1,5 @@
 import rss from "@astrojs/rss";
+import path from "path";
 import { convDateToHyphen } from "../lib/date";
 
 export const get = () => {
@@ -16,7 +17,7 @@ export const get = () => {
       pubDate: convDateToHyphen(post.frontmatter.date),
       description: post.frontmatter.excerpt,
       // content: "aa",
-      link: `/blog/${post.slug}`,
+      link: `/blog/${path.basename(post.file, ".md")}`,
     })),
     customData: `<language>ja-jp</language>`,
   });
