@@ -21,7 +21,7 @@ export default defineConfig({
     react(),
     mdx({
       syntaxHighlight: "shiki",
-      shikiConfig: { theme: "dracula" },
+      shikiConfig: { theme: "slack-dark" },
       remarkPlugins: [remarkToc, remarkBreaks, remarkParse],
       rehypePlugins: [rehypeStringify],
       remarkRehype: { footnoteLabel: "Footnotes" },
