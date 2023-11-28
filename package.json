@@ -26,10 +26,7 @@
     "react-dom": "^18.0.0",
     "react-icons": "latest",
     "react-loading-skeleton": "latest",
-    "sharp": "^0.32.6",
-    "zenn-content-css": "0.1.108",
-    "zenn-embed-elements": "0.1.108",
-    "zenn-markdown-html": "0.1.108"
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "@astrojs/check": "latest",
@@ -50,8 +47,7 @@
     "prettier-plugin-astro-organize-imports": "latest",
     "prettier-plugin-tailwindcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest",
-    "vite-plugin-node-stdlib-browser": "^0.2.1"
+    "typescript": "latest"
   },
   "trustedDependencies": [
     "sharp"

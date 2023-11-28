@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import { URL } from "./src/consts";
+// import commonjs from "@rollup/plugin-commonjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,4 @@ export default defineConfig({
       noExternal: ["react-icons"],
     },
   },
-  // image: {
-  //   service: squooshImageService(),
-  // },
 });
