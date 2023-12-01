@@ -27,7 +27,6 @@
     "gray-matter": "latest",
     "hastscript": "^8.0.0",
     "path": "^0.12.7",
-    "plaiceholder": "^3.0.0",
     "react": "latest",
     "react-dom": "^18.0.0",
     "react-icons": "latest",
