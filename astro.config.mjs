@@ -6,6 +6,8 @@ import remarkToc from "remark-toc";
 import remarkBreaks from "remark-breaks";
 import remarkParse from "remark-parse";
 import rehypeStringify from "rehype-stringify";
+import remarkCodeTitle from "remark-code-title";
+import remarkOembed from "remark-oembed";
 // astro integrations
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -21,10 +23,37 @@ export default defineConfig({
     react(),
     mdx({
       syntaxHighlight: "shiki",
-      shikiConfig: { theme: "slack-dark" },
-      remarkPlugins: [remarkToc, remarkBreaks, remarkParse],
-      rehypePlugins: [rehypeStringify],
-      remarkRehype: { footnoteLabel: "Footnotes" },
+      shikiConfig: {
+        theme: "slack-dark",
+      },
+      remarkPlugins: [
+        remarkToc,
+        remarkBreaks,
+        remarkCodeTitle,
+        [
+          remarkOembed,
+          {
+            asyncImg: true,
+          },
+        ],
+        [
+          remarkParse,
+          {
+            allowDangerousHtml: true,
+          },
+        ],
+      ],
+      rehypePlugins: [
+        [
+          rehypeStringify,
+          {
+            allowDangerousHtml: true,
+          },
+        ],
+      ],
+      remarkRehype: {
+        footnoteLabel: "Footnotes",
+      },
       gfm: false,
     }),
   ],
