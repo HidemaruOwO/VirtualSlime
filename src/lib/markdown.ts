@@ -47,6 +47,8 @@ async function optimizeImage(html: string) {
       parent,
     } = nodeSet;
 
+    if (src?.toString().startsWith("data:image/")) return;
+
     const picture = await getImage({
       src: importImage(`${src}`),
       widths: pictureDefault.widths,
@@ -70,7 +72,6 @@ async function optimizeImage(html: string) {
       h(
         "a",
         {
-          // herf: "https://hide0.net"
           href: imgOriginalResolutionSrc,
           target: "_blank",
           rel: "noreferrer noopener",
@@ -98,10 +99,11 @@ export async function mdToHtml(md: string) {
     .use(remarkCodeTitle)
     .use(remarkOembed, { asyncImg: true })
     .use(remarkParse)
-    .use(remarkToRehype)
+    .use(remarkToRehype, { allowDangerousHtml: true })
     .use(rehypeShiki, { highlighter })
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(md);
 
+  console.log(result.toString());
   return await optimizeImage(result.toString());
 }
