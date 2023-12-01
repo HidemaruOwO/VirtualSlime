@@ -97,7 +97,7 @@ export async function mdToHtml(md: string) {
     .use(remarkToc)
     .use(remarkBreaks)
     .use(remarkCodeTitle)
-    .use(remarkOembed, { asyncImg: true })
+    .use(remarkOembed, { asyncImg: true, syncWidget: true })
     .use(remarkParse)
     .use(remarkToRehype, { allowDangerousHtml: true })
     .use(rehypeShiki, { highlighter })
