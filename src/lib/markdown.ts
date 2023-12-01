@@ -20,7 +20,7 @@ import { h } from "hastscript";
 
 async function optimizeImage(html: string) {
   const pictureDefault = {
-    widths: [640, 750, 828, 1080, 1200, 1920],
+    widths: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     formats: ["webp", "jpeg"],
   };
 
@@ -54,8 +54,8 @@ async function optimizeImage(html: string) {
     });
 
     const imgSrc = picture.srcSet.values[0].url;
-    // const originalResolutionSrc =
-    // picture.srcSet.values[picture.srcSet.values.length - 1].url;
+    const imgOriginalResolutionSrc =
+      picture.srcSet.values[picture.srcSet.values.length - 1].url;
 
     const imgNode = h("img", {
       src: imgSrc,
@@ -65,8 +65,20 @@ async function optimizeImage(html: string) {
       width: picture.attributes.width,
       height: picture.attributes.height,
     });
-    const figureNode = h("figure", [imgNode]);
-
+    const figureNode = h("figure", [
+      h("figcaption", h("small", "画像をクリックして、元解像度で表示")),
+      h(
+        "a",
+        {
+          // herf: "https://hide0.net"
+          href: imgOriginalResolutionSrc,
+          target: "_blank",
+          rel: "noreferrer noopener",
+        },
+        imgNode
+      ),
+      h("figcaption", alt),
+    ]);
     parent?.children.splice(index!, 1, figureNode);
   });
 
