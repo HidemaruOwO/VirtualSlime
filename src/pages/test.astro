@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { mdToHtml } from "../lib/markdown";
+
+const postImports = import.meta.glob("../../posts/*.md", { eager: true });
+const posts = Object.values(postImports);
+
+const post = posts[11].rawContent();
+const html = mdToHtml(post);
+console.log(html);
+---
+
+<Layout title="Test" description="VirtualSlimeについての説明です" dir="/test">
+  <Fragment set:html={html} />
+</Layout>
