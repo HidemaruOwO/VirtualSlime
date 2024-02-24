@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import BlogHead from "../components/BlogHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Search from "../components/Search.tsx";
@@ -10,20 +11,34 @@ type Props = {
   keywords: string;
   description: string;
   dir: string;
+  coverImage: string;
+  isBlog: boolean;
 };
 
-const { title, keywords, description, dir } = Astro.props;
+const props = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
-    <BaseHead
-      title={title}
-      keywords={keywords}
-      description={description}
-      dir={dir}
-    />
+    {
+      props.isBlog ? (
+        <BlogHead
+          title={props.title}
+          keywords={props.keywords}
+          description={props.description}
+          dir={props.dir}
+          coverImage={props.coverImage}
+        />
+      ) : (
+        <BaseHead
+          title={props.title}
+          keywords={props.keywords}
+          description={props.description}
+          dir={props.dir}
+        />
+      )
+    }
   </head>
   <body>
     <Header />
