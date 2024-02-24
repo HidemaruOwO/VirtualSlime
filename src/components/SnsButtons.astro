@@ -1,0 +1,63 @@
+---
+import { URL } from "../consts";
+
+import "../styles/button/sns.css";
+
+type Site = {
+  name: string;
+  url: string;
+};
+type Props = {
+  title: string;
+  directory: string;
+};
+
+const props = Astro.props;
+const url = URL + props.directory;
+const sites: Site[] = [
+  { name: "twitter", url: "https://twitter.com/intent/tweet?url=" },
+  { name: "facebook", url: "https://www.facebook.com/sharer/sharer.php?u=" },
+  { name: "line", url: "https://social-plugins.line.me/lineit/share?url=" },
+  { name: "misskey", url: "https://misskeyshare.link/share.html?text=" },
+];
+---
+
+<div class="menu-button">
+  <i title="share button" class="zmdi zmdi-share"></i>
+  <a
+    href={sites[0].url + props.title + "\n" + url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i title="twitter button" class="zmdi zmdi-twitter"></i>
+  </a>
+  <a
+    href={sites[1].url + props.title + "\n" + url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i title="facebook button" class="zmdi zmdi-facebook"></i>
+  </a>
+  <a href={sites[2].url + url} target="_blank" rel="noopener noreferrer">
+    <i title="line button" class="icon-line"></i>
+  </a>
+  <a
+    href={sites[3].url + props.title + "\n" + url}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div
+      class="relative mx-auto"
+      style={{ width: 66 + "px", height: 66 + "px" }}
+    >
+      <div class="absolute inset-x-0 inset-y-0 m-auto h-12 w-12 text-center">
+        <img
+          alt="misskey-logo"
+          width={32}
+          height={32}
+          src="/images/misskey-logo.svg"
+        />
+      </div>
+    </div>
+  </a>
+</div>
