@@ -6,12 +6,13 @@ import remarkToc from "remark-toc";
 import remarkOembed from "remark-oembed";
 import remarkParse from "remark-parse";
 import remarkToRehype from "remark-rehype";
+import remarkLinkCard from "remark-link-card";
 // rehype plugins
 import rehypeStringify from "rehype-stringify";
 import rehypeShiki from "@stefanprobst/rehype-shiki";
 // other
 import * as shiki from "shiki";
-import { getImage } from "astro:assets";
+import { getImage } from "astro/assets";
 import rehypeParse from "rehype-parse";
 import { visit } from "unist-util-visit";
 import type { Element, Root } from "hast";
@@ -47,7 +48,11 @@ async function optimizeImage(html: string) {
       parent,
     } = nodeSet;
 
-    if (src?.toString().startsWith("data:image/")) return;
+    if (
+      src?.toString().startsWith("data:image/") ||
+      src?.toString().startsWith("http")
+    )
+      return;
 
     const picture = await getImage({
       src: importImage(`${src}`),
@@ -98,12 +103,16 @@ export async function mdToHtml(md: string) {
     .use(remarkBreaks)
     .use(remarkCodeTitle)
     .use(remarkOembed, { asyncImg: true, syncWidget: true })
+    .use(remarkLinkCard)
     .use(remarkParse)
     .use(remarkToRehype, { allowDangerousHtml: true })
     .use(rehypeShiki, { highlighter })
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(md);
 
-  console.log(result.toString());
   return await optimizeImage(result.toString());
+}
+
+export function remarkRender() {
+  return (tree, file) => {};
 }
