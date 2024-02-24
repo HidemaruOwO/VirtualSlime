@@ -14,7 +14,7 @@ export const get = async () => {
       title: post.frontmatter.title,
       pubDate: convDateToHyphen(post.frontmatter.date),
       description: post.frontmatter.excerpt,
-      content: await mdToHtml(post.rawContent()),
+      // content: await mdToHtml(post.rawContent()),
       link: `/blog/${path.basename(post.file, ".md")}`,
     }))
   );
