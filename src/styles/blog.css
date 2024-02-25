@@ -135,3 +135,20 @@ ol {
     padding: 0 5vw;
   }
 }
+
+.rlc-info {
+  border: 1px solid rgba(92, 147, 187, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rlc-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.rlc-favicon {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 5px;
+}

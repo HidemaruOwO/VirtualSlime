@@ -1,0 +1,100 @@
+---
+import "../../styles/blog.css";
+import "../../styles/button/shadow.css";
+
+import { Image } from "astro:assets";
+
+import CategoryLabel from "../../components/CategoryLabel.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import { convDate } from "../../lib/date";
+import { importImage } from "../../lib/import";
+import { mdToHtml } from "../../lib/markdown";
+import { getPosts } from "../../lib/post";
+
+export async function getStaticPaths() {
+  const posts = getPosts();
+
+  return posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        title: post.frontmatter.title,
+        description: post.frontmatter.excerpt,
+        directory: `/blog/${post.slug}`,
+        coverImage: post.frontmatter.cover_image,
+        authorImage: post.frontmatter.author_image,
+        date: post.frontmatter.date,
+        author: post.frontmatter.author,
+        category: post.frontmatter.category,
+        keywords: post.frontmatter.category,
+        content: post.content,
+      },
+    };
+  });
+}
+
+type Props = {
+  title: string;
+  description: string;
+  directory: string;
+  keywords: string;
+  category: string;
+  author: string;
+  date: string;
+  content: string;
+  coverImage: string;
+  authorImage: string;
+};
+
+const props = Astro.props;
+---
+
+<Layout
+  title={props.title}
+  description={props.description}
+  keywords={props.keywords}
+  dir={props.directory}
+  coverImage={props.coverImage}
+  isBlog={true}
+>
+  <a
+    href="/blog"
+    class="shadow-button shadow-button-border-shadow shadow-button-border-shadow--color2"
+  >
+    Go Back
+  </a>
+  <div
+    class="article-main mt-6 w-full rounded-lg bg-white px-10 py-6 shadow-md"
+  >
+    <CategoryLabel category={props.category} />
+    <div class="mt-4 flex items-center justify-between">
+      <h1 class="mx-auto mb-6 text-center">{props.title}</h1>
+    </div>
+    <Image
+      src={importImage(props.coverImage)}
+      alt="article's cover image"
+      class="mx-auto w-full rounded"
+      width={768}
+      height={510}
+    />
+    <div class="my-8 flex items-center justify-between bg-gray-100 p-2">
+      <div class="flex items-center">
+        <Image
+          src={importImage(props.authorImage)}
+          alt="Author Image"
+          width={40}
+          height={40}
+          class="mx-4 hidden rounded-full object-cover sm:block"
+        />
+        <p>{props.author}</p>
+      </div>
+      <div class="mr-4">{convDate(props.date)}</div>
+    </div>
+    <div class="blog-text mt-2">
+      <Fragment set:html={mdToHtml(props.content)} />
+    </div>
+  </div>
+</Layout>
