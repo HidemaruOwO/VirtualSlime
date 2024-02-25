@@ -9,6 +9,7 @@ author_image: "/images/authors/hidemaru.png"
 ---
 
 GitHub では 2021 年の 8 月 13 日 にパスワード認証が廃止されたので、重い腰をあげて SSH で GitHub にアクセスするように設定します。
+
 https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/
 
 ## ローカルの設定
