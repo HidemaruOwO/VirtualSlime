@@ -19,6 +19,22 @@ import type { Element, Root } from "hast";
 import { importImage } from "./import";
 import { h } from "hastscript";
 
+async function editRlcUrl(html: string) {
+  const ast = unified().use(rehypeParse, { fragment: true }).parse(html);
+
+  visit(ast, "element", (node) => {
+    if (
+      node.tagName === "span" &&
+      node.properties?.className?.includes("rlc-url")
+    ) {
+      const url = new URL(node.children[0].value);
+      node.children[0].value = url.hostname;
+    }
+  });
+
+  return unified().use(rehypeStringify).stringify(ast);
+}
+
 async function optimizeImage(html: string) {
   const pictureDefault = {
     widths: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -93,6 +109,13 @@ async function optimizeImage(html: string) {
   return unified().use(rehypeStringify).stringify(ast);
 }
 
+async function editHtml(html: string) {
+  let result = html;
+  result = await editRlcUrl(result);
+  result = await optimizeImage(result);
+  return result;
+}
+
 export async function mdToHtml(md: string) {
   const highlighter = await shiki.getHighlighter({
     theme: "slack-dark",
@@ -110,7 +133,7 @@ export async function mdToHtml(md: string) {
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(md);
 
-  return await optimizeImage(result.toString());
+  return await editHtml(result.toString());
 }
 
 export function remarkRender() {
