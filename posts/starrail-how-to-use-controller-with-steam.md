@@ -10,6 +10,12 @@ author_image: "/images/authors/hidemaru.png"
 
 スターレイルではコントローラーのサポートが狭く、コントローラーを接続してもスターレイル側で認識しないことがありますが、SteamPad は認識するため、SteamPad を使ってスターレイルをコントローラーで遊びたいと思います。
 
+https://twitter.com/potenagehonmono/status/1761303503727948123
+
+https://zenn.dev/januswel/articles/44801708e8c7fdd358e6
+
+https://www.youtube.com/watch?v=pQj7GIyKrqQ
+
 ## Steam
 
 ### なんだこれは
@@ -36,14 +42,14 @@ https://store.steampowered.com/about/
 
 次へをどんどん押していきログインしてください
 
-![Steam Installer](/images/posts/inside/img23.png)
+![Steam Installer](/images/posts/include/img23.png)
 
 ### Steam にスターレイルを追加
 
 Steam を起動して左下にあるゲームを追加を押してください
 そうしたら「非 Steam ゲームを追加」を押してください
 
-![Steam Add Game](/images/posts/inside/img24.png)
+![Steam Add Game](/images/posts/include/img24.png)
 
 この画面が出たら参照を押していただき「ファイル名」の項目に`C:\Program Files\Star Rail\Games\StarRail.exe`とコピペしてください
 
@@ -51,28 +57,28 @@ Steam を起動して左下にあるゲームを追加を押してください
 スターレイルのインストール先が違う場合はパスに随時変更を加えてください
 :::
 
-![Steam Add Game Window](/images/posts/inside/img25.png)
-![Steam Add Game Window Explorer](/images/posts/inside/img26.png)
+![Steam Add Game Window](/images/posts/include/img25.png)
+![Steam Add Game Window Explorer](/images/posts/include/img26.png)
 
 そうしたらこのようにスターレイルがランチャーに追加されたことが分かります
 
-![Steam Starrail](/images/posts/inside/img27.png)
+![Steam Starrail](/images/posts/include/img27.png)
 
 ### Steam を管理者権限で実行
 
 スターレイルは管理者権限が必要なゲームなため、Steam 入力するには Steam にも管理者権限を要します
 では Steam を開いて、左上にある「Steam」を押して「終了」を押してください
 
-![Steam Stop](/images/posts/inside/img28.png)
+![Steam Stop](/images/posts/include/img28.png)
 
 そうしたら Windows キーを押して、`Steam`と検索し、「管理者権限で実行を押して Steam を起動してください」
 
-![Steam Run Admin](/images/posts/inside/img29.png)
+![Steam Run Admin](/images/posts/include/img29.png)
 
 Steam が起動したらスターレイルの画面まで移動してプレイを選択してください
 これで Pad 操作でスターレイルが遊べるようになります
 
-![Starrail](/images/posts/inside/img30.png)
+![Starrail](/images/posts/include/img30.png)
 
 ## 最後に
 

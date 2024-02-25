@@ -134,8 +134,5 @@ sudo docker-compose restart
 #### サーバーに入る
 
 マイクラを起動して、サーバーに入ってください
-入り方についてはこの記事をご覧ください
 
-https://arekoreport.net/minecraft-how-to-connect-with-multiplay-server/
-
-ご愛読ありがとうございました
+ローカルで立ち上げたなら、127.0.0.1:25565に繋げればサーバーに入れます

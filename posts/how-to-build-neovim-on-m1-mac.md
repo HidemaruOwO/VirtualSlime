@@ -12,7 +12,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ## 実行環境
 
-![neofetch result](/images/posts/inside/img5.jpeg)
+![neofetch result](/images/posts/include/img5.jpeg)
 
 ## NeoVim
 
@@ -28,14 +28,14 @@ https://github.com/neovim/neovim
 
 NeoVim の公式のビルドの必要要件を見てみると、
 
-> Clang or GCC version 4.4+  
-> CMake version 3.10+, built with TLS/SSL support  
+> Clang or GCC version 4.4+
+> CMake version 3.10+, built with TLS/SSL support
 
-引用: 
+引用:
 
 https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites
 
-このようになっております  
+このようになっております
 `Clang`のバージョンを確認してみると、14.0.0 なので特に変更することはありません
 
 ```bash
@@ -92,5 +92,5 @@ sudo make install
 ```
 
 インストールが終わったら`nvim`を実行してください
-![Neovim Run](/images/posts/inside/img6.jpeg)
+![Neovim Run](/images/posts/include/img6.jpeg)
 良い Vim ライフを！！

@@ -12,7 +12,7 @@ author_image: "/images/authors/hidemaru.png"
 
 ## 実行環境
 
-![neofetch result](/images/posts/inside/img1.jpeg)
+![neofetch result](/images/posts/include/img1.jpeg)
 
 ## エラー発生手順
 
@@ -43,5 +43,5 @@ chsh: PAM: Authentication failure
 $ sudo chsh $USER -s $(which fish)
 ```
 
-これで再ログインしてあげればシェルが fish に変わります  
+これで再ログインしてあげればシェルが fish に変わります
 他の解決方法だと **/etc/passwd** を書き換えてあげるのも良さそうです
