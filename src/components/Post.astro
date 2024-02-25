@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import type { BasePost } from "../interface.ts";
 import { convDate } from "../lib/date";
 import { importImage } from "../lib/import.ts";
-import CategoryLabel from "./CategoryLabel.tsx";
+import CategoryLabel from "./CategoryLabel.astro";
 
 import "../styles/button/material.css";
 
@@ -23,9 +23,9 @@ const date = convDate(post.frontmatter.date);
       <Image
         src={importImage(`${post.frontmatter.cover_image}`)}
         alt="Cover Image"
+        class="mb-4 rounded"
         width={600}
         height={420}
-        class="mb-4 rounded"
       />
     )
   }

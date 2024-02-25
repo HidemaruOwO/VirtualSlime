@@ -1,0 +1,12 @@
+---
+type Props = {
+  category: string;
+};
+const props = Astro.props;
+---
+
+<div class="rounded px-2 py-1 font-bold text-gray-400 hover:underline">
+  <a href={`/blog/category/${props.category.toLowerCase()}`}>
+    {props.category}
+  </a>
+</div>
