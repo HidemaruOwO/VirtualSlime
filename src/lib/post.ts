@@ -14,10 +14,11 @@ export function getPosts() {
       "utf-8"
     );
 
-    const { data: frontmatter } = matter(markdownWithMeta);
+    const { data: frontmatter, content } = matter(markdownWithMeta);
 
     return {
       slug,
+      content,
       frontmatter,
     };
   });
