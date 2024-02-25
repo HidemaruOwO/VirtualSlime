@@ -99,11 +99,7 @@ async function optimizeImage(html: string) {
             target: "_blank",
             rel: "noreferrer noopener",
           },
-          // [
           imgNode
-          // h("figcaption", { class: "imi-on-click" }, h("small", "拡大")),
-          // ,
-          // ]
         ),
       ]),
       h("figcaption", { class: "imi-description" }, alt),
@@ -120,6 +116,7 @@ async function editHtml(html: string) {
   let result = html;
   result = await editRlcUrl(result);
   result = await optimizeImage(result);
+
   return result;
 }
 
@@ -127,7 +124,6 @@ export async function mdToHtml(md: string) {
   const highlighter = await shiki.getHighlighter({
     theme: "slack-dark",
   });
-
   const result = await unified()
     .use(remarkToc)
     .use(remarkBreaks)
@@ -143,7 +139,6 @@ export async function mdToHtml(md: string) {
 
   return await editHtml(result.toString());
 }
-
 export function remarkRender() {
   return (tree, file) => {};
 }
