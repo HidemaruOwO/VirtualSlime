@@ -17,7 +17,7 @@ import rehypeParse from "rehype-parse";
 import { visit } from "unist-util-visit";
 import type { Element, Root } from "hast";
 import { importImage } from "./import";
-import { h } from "hastscript";
+import { h, s } from "hastscript";
 
 async function editRlcUrl(html: string) {
   const ast = unified().use(rehypeParse, { fragment: true }).parse(html);
@@ -56,17 +56,17 @@ async function optimizeImage(html: string) {
   });
 
   const promises = imageNodes.map(async (nodeSet) => {
-    const {
+    let {
       node: {
         properties: { src, alt },
       },
       index,
       parent,
     } = nodeSet;
-
     if (
       src?.toString().startsWith("data:image/") ||
-      src?.toString().startsWith("http")
+      src?.toString().startsWith("http") ||
+      src?.toString().startsWith("/remark-link-card/")
     )
       return;
 
@@ -85,21 +85,28 @@ async function optimizeImage(html: string) {
       alt: alt,
       loading: "lazy",
       decoding: "async",
+      class: "imi-image",
       width: picture.attributes.width,
       height: picture.attributes.height,
     });
-    const figureNode = h("figure", [
-      h("figcaption", h("small", "画像をクリックして、元解像度で表示")),
-      h(
-        "a",
-        {
-          href: imgOriginalResolutionSrc,
-          target: "_blank",
-          rel: "noreferrer noopener",
-        },
-        imgNode
-      ),
-      h("figcaption", alt),
+    // imi is "in markdown image"
+    const figureNode = h("figure", { class: "imi-container" }, [
+      h("div", { class: "imi-click" }, [
+        h(
+          "a",
+          {
+            href: imgOriginalResolutionSrc,
+            target: "_blank",
+            rel: "noreferrer noopener",
+          },
+          // [
+          imgNode
+          // h("figcaption", { class: "imi-on-click" }, h("small", "拡大")),
+          // ,
+          // ]
+        ),
+      ]),
+      h("figcaption", { class: "imi-description" }, alt),
     ]);
     parent?.children.splice(index!, 1, figureNode);
   });
@@ -126,7 +133,8 @@ export async function mdToHtml(md: string) {
     .use(remarkBreaks)
     .use(remarkCodeTitle)
     .use(remarkOembed, { asyncImg: true, syncWidget: true })
-    .use(remarkLinkCard)
+    .use(remarkLinkCard, { cache: true })
+    // .use(remarkLinkCard)
     .use(remarkParse)
     .use(remarkToRehype, { allowDangerousHtml: true })
     .use(rehypeShiki, { highlighter })
